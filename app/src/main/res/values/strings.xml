@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">jobClique</string>
+    <string name="login_page">Login Page</string>
 </resources>
