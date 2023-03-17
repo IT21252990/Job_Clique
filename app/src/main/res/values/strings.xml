@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">jobClique</string>
 
+
+    <string name="jobApplication">Job application</string>
+
+    <string name="login_page">Login Page</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_Home">Hello Home</string>
+    <string name="hello_Profile">Hello Profile</string>
+    <string name="hello_WishList">Hello Wish List</string>
+    <string name="hello_Search">Hello Search</string>
+
+
 </resources>
