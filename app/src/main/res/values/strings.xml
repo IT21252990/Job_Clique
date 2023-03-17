@@ -10,5 +10,13 @@
     <string name="hello_WishList">Hello Wish List</string>
     <string name="hello_Search">Hello Search</string>
     <string name="wish_list_header">My Wish List</string>
+    <string name="wishlist_itemhead1">AIA Wealth Planner\'s Manager</string>
+    <string name="wishlist_subhead1">AIA Insurance</string>
+    <string name="wishlist_itemhead2">Call Center Agent</string>
+    <string name="wishlist_subhead">Kapruka Holdings PLC</string>
+    <string name="wishlist_itemhead3">Branch Manager</string>
+    <string name="wishlist_subHead3">Allianz Insurance Lanka Limited</string>
+    <string name="wishlist_itemHead4">Business Analyst</string>
+    <string name="wishlist_subhead4">Virtusa (Pvt.) Ltd</string>
 
 </resources>
