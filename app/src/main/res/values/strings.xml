@@ -34,8 +34,14 @@
     <string name="regiRadio1_text">Job Seeker: (I want to look and apply for jobs)</string>
     <string name="regiRadio2_text">Employer: (I want to find great candidates)</string>
     <string name="regiPage_btnJoinNow">Join Now</string>
-    <string name="haveaccounLoginBtn">Already have an account? Login Here</string>
+    <string name="haveaccounLoginBtn">Already have an account? <a href = "">Login Here</a></string>
     <string name="userRegi_title">Wellcome to JobClique !</string>
     <string name="btntestSignUp">Sign Up</string>
+    <string name="userloginpw_head">Enter Your Password :</string>
+    <string name="login_rememberMe_text">Remember me</string>
+    <string name="btnlogin_text">Login</string>
+    <string name="loginForgot_pw"><a href = "">Forgot password?</a></string>
+    <string name="loginRegiLink">Don\'t have an account? <a href = "">Sign up here</a></string>
+    <string name="btntestLogin">Login</string>
 
 </resources>

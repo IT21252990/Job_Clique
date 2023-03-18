@@ -79,6 +79,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/darkBlue"
+        android:onClick="userLoginPage"
+        android:text="@string/btntestLogin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdminMenu"
+        app:layout_constraintVertical_bias="0.58" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="userRegistrationPage"
         android:text="@string/btntestSignUp"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -87,6 +104,5 @@
         app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAdminMenu"
-        app:layout_constraintVertical_bias="0.58"
-        android:onClick="userRegistrationPage"/>
+        app:layout_constraintVertical_bias="0.58" />
 </androidx.constraintlayout.widget.ConstraintLayout>

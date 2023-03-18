@@ -46,19 +46,21 @@
         app:layout_constraintVertical_bias="0.457"
         app:srcCompat="@drawable/pngegg" />
 
-    <Button
+    <TextView
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
         android:background="@color/darkBlue"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/haveaccounLoginBtn"
+        android:textAlignment="center"
         android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton3"
-        app:layout_constraintVertical_bias="0.823" />
+        app:layout_constraintVertical_bias="0.837" />
 
     <TextView
         android:id="@+id/textView10"
@@ -199,6 +201,8 @@
         android:layout_height="50dp"
         android:background="@color/yellow"
         android:text="@string/regiPage_btnJoinNow"
+        android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.907"
