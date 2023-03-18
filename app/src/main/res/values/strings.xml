@@ -70,5 +70,12 @@
     <string name="btnProfileLogOut">Logout</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_ResetPassword_fragment">Hello Kalinga You are in reset fragment</string>
+    <string name="reSetPwHead">Reset My Password</string>
+    <string name="resetPwcurrentPw">Enter Current Password :</string>
+    <string name="resetPwNewPw">Enter New Password :</string>
+    <string name="resetPwConfirmPw">Enter Confirm Password :</string>
+    <string name="currPwHint">Enter Current Password Here</string>
+    <string name="newPwHint">Enter New Password Here</string>
+    <string name="ConfirmPwHint">Enter Confirm Password Here</string>
 
 </resources>

@@ -17,4 +17,6 @@
     <dimen name="profileMainTitle">18dp</dimen>
     <dimen name="profileNavigateBtnWidth">150dp</dimen>
     <dimen name="profileNagigateBtnHeight">50dp</dimen>
+    <dimen name="resetPwTitleHeight">80dp</dimen>
+    <dimen name="myExtraPadding">30dp</dimen>
 </resources>

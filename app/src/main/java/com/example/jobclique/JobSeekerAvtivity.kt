@@ -25,21 +25,13 @@ class JobSeekerAvtivity : AppCompatActivity() {
                 else -> {
 
                 }
-
             }
             true
         }
     }
-
-
-
-
     private fun replaceFragment(fragment: Fragment){
 
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
-        fragmentTransaction.commit()
+        supportFragmentManager.beginTransaction().replace(R.id.nav_container , fragment).commit()
 
     }
 }
