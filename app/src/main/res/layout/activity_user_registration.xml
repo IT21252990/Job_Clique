@@ -34,6 +34,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457"
+        app:srcCompat="@drawable/pngegg" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
@@ -52,13 +64,13 @@
         android:id="@+id/textView10"
         android:layout_width="418dp"
         android:layout_height="60dp"
+        android:gravity="center|fill_horizontal"
         android:text="@string/signup_head"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="34dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar6" />
 
