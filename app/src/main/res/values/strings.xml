@@ -18,5 +18,8 @@
     <string name="wishlist_subHead3">Allianz Insurance Lanka Limited</string>
     <string name="wishlist_itemHead4">Business Analyst</string>
     <string name="wishlist_subhead4">Virtusa (Pvt.) Ltd</string>
+    <string name="test_btn1_jobseeker">I am Job Seeker</string>
+    <string name="text_btn2_employer">I am Employer</string>
+    <string name="test_btn3_admin">I am Administrator</string>
 
 </resources>
