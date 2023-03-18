@@ -28,4 +28,9 @@ class MainActivity : AppCompatActivity() {
         var intent = Intent(this,userLoginActivity::class.java)
         startActivity(intent)
     }
+
+    fun employerRegiPartTwo(view: View){
+        var intent = Intent(this,EmployerRegistrationNextPart::class.java)
+        startActivity(intent)
+    }
 }
