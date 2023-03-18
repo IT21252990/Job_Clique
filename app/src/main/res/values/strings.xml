@@ -34,14 +34,24 @@
     <string name="regiRadio1_text">Job Seeker: (I want to look and apply for jobs)</string>
     <string name="regiRadio2_text">Employer: (I want to find great candidates)</string>
     <string name="regiPage_btnJoinNow">Join Now</string>
-    <string name="haveaccounLoginBtn">Already have an account? <a href = "">Login Here</a></string>
+    <string name="haveaccounLoginBtn">Already have an account? <a href="">Login Here</a></string>
     <string name="userRegi_title">Welcome to JobClique !</string>
     <string name="btntestSignUp">Sign Up</string>
     <string name="userloginpw_head">Enter Your Password :</string>
     <string name="login_rememberMe_text">Remember me</string>
     <string name="btnlogin_text">Login</string>
-    <string name="loginForgot_pw"><a href = "">Forgot password?</a></string>
-    <string name="loginRegiLink">Don\'t have an account? <a href = "">Sign up here</a></string>
+    <string name="loginForgot_pw"><a href="">Forgot password?</a></string>
+    <string name="loginRegiLink">Don\'t have an account? <a href="">Sign up here</a></string>
     <string name="btntestLogin">Login</string>
+    <string name="eployerRegi_title">Create a New Company Account</string>
+    <string name="emplyerNextSubTitle">Create your company account to post Job Ads with JobClique</string>
+    <string name="empRegiNPartCName">Your Company Name :</string>
+    <string name="empRegiCNameSub">This company name will appear in job listings.</string>
+    <string name="Enter_Company_Name">Enter Company Name</string>
+    <string name="empRegiphnnum">Your Phone Number :</string>
+    <string name="empregiaddphnsubhead">Enter your contact number, so we can reach you if we need to improve your results. (This number will NOT appear in job listings.)</string>
+    <string name="empregiphnNumhint">Enter Phone Number</string>
+    <string name="cancelempcompanyAddbtn">Cancel this ! I\'m Job Seeker</string>
+    <string name="empCompanyCreatebtn">Create Account</string>
 
 </resources>
