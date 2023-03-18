@@ -79,5 +79,6 @@
     <string name="ConfirmPwHint">Enter Confirm Password Here</string>
     <string name="btnResetPw">Reset Password</string>
     <string name="btnResetPwCancel">Cancel</string>
+    <string name="profileDlt">Delete My Account</string>
 
 </resources>
