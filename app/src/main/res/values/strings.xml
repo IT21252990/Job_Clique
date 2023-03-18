@@ -35,7 +35,7 @@
     <string name="regiRadio2_text">Employer: (I want to find great candidates)</string>
     <string name="regiPage_btnJoinNow">Join Now</string>
     <string name="haveaccounLoginBtn">Already have an account? <a href = "">Login Here</a></string>
-    <string name="userRegi_title">Wellcome to JobClique !</string>
+    <string name="userRegi_title">Welcome to JobClique !</string>
     <string name="btntestSignUp">Sign Up</string>
     <string name="userloginpw_head">Enter Your Password :</string>
     <string name="login_rememberMe_text">Remember me</string>
