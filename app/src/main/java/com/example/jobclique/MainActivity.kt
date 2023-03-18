@@ -21,5 +21,6 @@ class MainActivity : AppCompatActivity() {
 
     fun userRegistrationPage(view: View){
         var intent = Intent(this,userRegistrationActivity::class.java)
+        startActivity(intent)
     }
 }
