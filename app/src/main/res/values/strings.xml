@@ -8,6 +8,11 @@
     <string name="hello_Home">Hello Home</string>
     <string name="hello_Profile">Hello Profile</string>
     <string name="hello_WishList">Hello Wish List</string>
-    <string name="hello_Search">Hello Search</string>
 
+    <!--search -->
+    <string name="hello_Search">Hello Search</string>
+    <string name="searchHint">Enter a job title</string>
+
+    <!-- jobs-->
+    <string name="se_job_title">    Software Engineer</string>
 </resources>

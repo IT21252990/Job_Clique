@@ -6,29 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
+    <Button
+        android:id="@+id/btnAcceptApplications"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/darkBlue"
-        app:itemBackground="@null"
+        android:backgroundTint="@color/Blue"
+        android:text="Admin-Accept Applications"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav">
+        app:layout_constraintTop_toBottomOf="@+id/btnAppliedJobs"
+        tools:layout_editor_absoluteX="71dp" />
 
+    <Button
+        android:id="@+id/btnJobApplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Blue"
+        android:text="Apply for a job"
+        app:layout_constraintBottom_toTopOf="@+id/btnAppliedJobs"
+        app:layout_constraintTop_toBottomOf="@+id/btnJobSeekerHome"
+        tools:layout_editor_absoluteX="123dp" />
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <Button
+        android:id="@+id/btnAppliedJobs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Blue"
+        android:text="Applied jobs"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcceptApplications"
+        app:layout_constraintTop_toBottomOf="@+id/btnJobApplication"
+        tools:layout_editor_absoluteX="134dp" />
+
+    <Button
+        android:id="@+id/btnJobSeekerHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Blue"
+        android:text="Job Seeker Home"
+        app:layout_constraintBottom_toTopOf="@+id/btnJobApplication"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="118dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
