@@ -1,15 +1,22 @@
 <resources>
     <string name="app_name">jobClique</string>
-
-
-    <string name="jobApplication">Job application</string>
-
-    <string name="login_page">Login Page</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_Home">Hello Home</string>
-    <string name="hello_Profile">Hello Profile</string>
-    <string name="hello_WishList">Hello Wish List</string>
-    <string name="hello_Search">Hello Search</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iamEmployer">I AM EMPLOYER</string>
+    <string name="tvNoitfyRequests">Requests</string>
+    <string name="request_1" />
+    <string name="requestNotify">Requests</string>
+    <string name="Approvebtn">Approve</string>
+    <string name="Declinebtn">Decline</string>
+    <string name="jobSeeker" />
+    <string name="employer" />
+    <string name="admin">Admin</string>
+    <string name="testempreg">eReg</string>
+    <string name="signup">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="addPost">Click here to Add New Post</string>
+    <string name="Addpost">Click here to send a Requst to Add New Post!</string>
+    <string name="PostRequest">Request to Add New Post</string>
 
 
 </resources>

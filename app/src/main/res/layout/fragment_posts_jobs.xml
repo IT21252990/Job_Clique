@@ -1,0 +1,336 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".PostsJobs">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar10"
+        android:layout_width="182dp"
+        android:layout_height="236dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/darkBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/materialToolbar9"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="77dp"
+        android:layout_height="98dp"
+        android:src="@drawable/baseline_emoji_people_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine7"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar10"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar10" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar9"
+        android:layout_width="183dp"
+        android:layout_height="240dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/darkBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="77dp"
+        android:layout_height="98dp"
+        android:src="@drawable/baseline_emoji_people_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine4"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar9"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar9" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar8"
+        android:layout_width="183dp"
+        android:layout_height="235dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/darkBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar10"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:layout_editor_absoluteX="214dp" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selected_wishlist"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="77dp"
+        android:layout_height="98dp"
+        android:src="@drawable/baseline_emoji_people_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar8"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar8"
+        app:layout_constraintVertical_bias="0.613" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:autoText="false"
+        android:background="@color/Blue"
+        android:contextClickable="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Job posts" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar6"
+        android:layout_width="186dp"
+        android:layout_height="236dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/darkBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar9"
+        app:layout_constraintEnd_toStartOf="@+id/materialToolbar8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="77dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/baseline_emoji_people_24"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar6"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar6" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selected_wishlist"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar6"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selected_wishlist"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar8"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar8" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:src="@drawable/selected_wishlist"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar9"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar9"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/selected_wishlist"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar10"
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar10"
+        tools:layout_editor_absoluteY="372dp" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="152dp"
+        android:layout_height="80dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="This is a job offered for................"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar6"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar6"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine2"
+        android:layout_width="147dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="This is a job offered for................"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar8"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar8"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar8" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine4"
+        android:layout_width="149dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="This is a job offered for................"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar9"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar9"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar9" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton6"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton8"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar8"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintVertical_bias="0.535" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar10"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton9"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar9"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar9" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar6"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar6" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine2"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar8"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar8" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine4"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar9"
+        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar9" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine7"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar10"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar10"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintVertical_bias="0.296" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="53dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/baseline_post_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar10" />
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addPost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar9" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine7"
+        android:layout_width="149dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="This is a job offered for................"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar10"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar10"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar10" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
