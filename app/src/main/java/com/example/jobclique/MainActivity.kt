@@ -35,6 +35,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        var btnAcceptApplications = findViewById<Button>(R.id.btnAcceptApplications)
+        btnAcceptApplications.setOnClickListener {
+            var intent = Intent(this,MainActivityEmployer::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

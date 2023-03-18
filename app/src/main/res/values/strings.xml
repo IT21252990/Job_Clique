@@ -36,4 +36,6 @@
     <!--Applied Jobs-->
     <string name="Applied_Jobs_Title">Applied Jobs List</string>
     <string name="Applied_jobs_description"> A list of job vacancies you have applied.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
