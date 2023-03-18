@@ -4,4 +4,9 @@
     <dimen name="search_tv_margin">16dp </dimen>
     <dimen name="btn_height"> 48dp </dimen>
     <dimen name="txt_size_heading"> 24dp </dimen>
+
+    <!--Application-->
+    <dimen name="typing_space_height">34dp </dimen>
+    <dimen name="typing_space_width">340dp </dimen>
+    <dimen name="application_text_size"> 16dp </dimen>
 </resources>

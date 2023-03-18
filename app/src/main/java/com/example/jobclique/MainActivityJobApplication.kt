@@ -21,7 +21,7 @@ class MainActivityJobApplication : AppCompatActivity() {
                 R.id.home -> replaceFragment(Home())
                 R.id.search -> replaceFragment(Search())
                 R.id.wishlist -> replaceFragment(WishList())
-                R.id.profile -> replaceFragment(Profile())
+                R.id.profile -> replaceFragment(AppliedJobs())
 
                 else -> {
 

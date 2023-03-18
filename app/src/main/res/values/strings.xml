@@ -14,5 +14,26 @@
     <string name="searchHint">Enter a job title</string>
 
     <!-- jobs-->
-    <string name="se_job_title">    Software Engineer</string>
+    <string name="se_job_title">Software Engineer</string>
+
+    <!-- Application -->
+    <string name="Apply_for_this_job">Apply for this job</string>
+    <string name="tv_application_name">Your Name :</string>
+    <string name="tv_application_email">Your Email :</string>
+    <string name="tv_application_pno">Your Phone Number :</string>
+    <string name="tv_application_attach">Attach CV / Resume :</string>
+    <string name="tv_application_nofile">No file chosen</string>
+    <string name="tv_application_addi">Additional Details :</string>
+    <!-- buttons-->
+    <string name="btn_choose_file">Choose File</string>
+    <string name="btn_application_send">Send Application</string>
+    <!-- hints-->
+    <string name="application_hint_name">Enter your name here</string>
+    <string name="application_hint_email">Enter your email here</string>
+    <string name="application_hint_phnno">Enter your phone number here</string>
+    <string name="application_hint_addi">(Optional)</string>
+
+    <!--Applied Jobs-->
+    <string name="Applied_Jobs_Title">Applied Jobs List</string>
+    <string name="Applied_jobs_description"> A list of job vacancies you have applied.</string>
 </resources>

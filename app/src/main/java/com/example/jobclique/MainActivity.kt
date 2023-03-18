@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+        var btnAppliedJobs = findViewById<Button>(R.id.btnAppliedJobs)
+        btnAppliedJobs.setOnClickListener {
+            var intent = Intent(this,MainActivityJobApplication::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 

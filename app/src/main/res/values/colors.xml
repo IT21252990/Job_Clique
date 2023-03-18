@@ -14,5 +14,8 @@
     <color name="lightBlue">#F2F7FF</color>
     <color name="yellow">#FFE834</color>
     <color name="transparentDarkBlue">#E910316B</color>
+    <color name="LightBlue2">#DDE6F6</color>
+    <color name="LightBlue3">#D2DFF6</color>
+    <color name="DaaaarkBlue">#081937</color>
 
 </resources>
