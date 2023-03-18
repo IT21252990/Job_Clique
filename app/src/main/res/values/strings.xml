@@ -77,5 +77,7 @@
     <string name="currPwHint">Enter Current Password Here</string>
     <string name="newPwHint">Enter New Password Here</string>
     <string name="ConfirmPwHint">Enter Confirm Password Here</string>
+    <string name="btnResetPw">Reset Password</string>
+    <string name="btnResetPwCancel">Cancel</string>
 
 </resources>
