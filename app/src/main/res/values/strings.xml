@@ -53,6 +53,22 @@
     <string name="empregiphnNumhint">Enter Phone Number</string>
     <string name="cancelempcompanyAddbtn">Cancel this ! I\'m Job Seeker</string>
     <string name="empCompanyCreatebtn">Create Account</string>
-    <string name="btnTestEmpRegiPart2" >Employer Registration Prat 2</string>
+    <string name="btnTestEmpRegiPart2">Employer Registration Prat 2</string>
+    <string name="jobseeker_profile_header">My Profile</string>
+    <string name="jobseeker_profile_head">Hello Kalinga !</string>
+    <string name="userRegiName">Enter Your Name :</string>
+    <string name="userRegiNameHint">Enter Name Here</string>
+    <string name="profileEdtNameTitle">My Name :</string>
+    <string name="profileEdtMyName">Kalinga</string>
+    <string name="profileMyEmailTitle">My Email :</string>
+    <string name="profileEditEmail">kalingajayathilaka@gmail.com</string>
+    <string name="profileSveChngeBtn">Save Changes</string>
+    <string name="profileUpdteDetailsTitle">Update My Profile</string>
+    <string name="btnProfileRsetPw">Reset Password</string>
+    <string name="btnProfileWistList">My Wish List</string>
+    <string name="btnProfile_Appliedjobs">Applied Jobs</string>
+    <string name="btnProfileLogOut">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_ResetPassword_fragment">Hello Kalinga You are in reset fragment</string>
 
 </resources>

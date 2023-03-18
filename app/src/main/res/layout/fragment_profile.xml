@@ -1,16 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBlue"
     tools:context=".Profile">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/textView26"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:autoText="false"
+        android:background="@color/Blue"
+        android:contextClickable="false"
         android:gravity="center_horizontal|center_vertical"
-        android:text="@string/hello_Profile"
-        android:textSize="48dp" />
+        android:paddingLeft="20dp"
+        android:text="@string/jobseeker_profile_header"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="290dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_profile_title_bar"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/jobseeker_profile_head"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/profile_head_txtSize"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/profile_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toEndOf="@+id/textView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar7"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/Blue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/profile_main_title_round"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/myPadding"
+        android:paddingRight="@dimen/myPadding"
+        android:text="@string/profileUpdteDetailsTitle"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/profileMainTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar7" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/profileEdtNameTitle"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/profile_Title_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="@dimen/profileLayoutWidth"
+        android:layout_height="@dimen/profileLayoutHeight"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/myPadding"
+        android:text="@string/profileEdtMyName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/profileMyEmailTitle"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/profile_Title_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="@dimen/profileLayoutWidth"
+        android:layout_height="@dimen/profileLayoutHeight"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/myPadding"
+        android:text="@string/profileEditEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/yellow"
+        android:paddingLeft="@dimen/myPadding"
+        android:paddingRight="@dimen/myPadding"
+        android:text="@string/profileSveChngeBtn"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+    <Button
+        android:id="@+id/btnResetPw"
+        android:layout_width="@dimen/profileNavigateBtnWidth"
+        android:layout_height="@dimen/profileNagigateBtnHeight"
+        android:background="@drawable/round_profile_navigation_btn"
+        android:text="@string/btnProfileRsetPw"
+        android:textColor="@color/lightBlue"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button11"
+        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="@dimen/profileNavigateBtnWidth"
+        android:layout_height="@dimen/profileNagigateBtnHeight"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_profile_navigation_btn"
+        android:text="@string/btnProfileWistList"
+        android:textColor="@color/lightBlue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/btnResetPw"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar7" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="@dimen/profileNavigateBtnWidth"
+        android:layout_height="@dimen/profileNagigateBtnHeight"
+        android:background="@drawable/round_profile_navigation_btn"
+        android:text="@string/btnProfile_Appliedjobs"
+        android:textColor="@color/lightBlue"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button13"
+        app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="@dimen/profileNavigateBtnWidth"
+        android:layout_height="@dimen/profileNagigateBtnHeight"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_profile_navigation_btn"
+        android:text="@string/btnProfileLogOut"
+        android:textColor="@color/lightBlue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

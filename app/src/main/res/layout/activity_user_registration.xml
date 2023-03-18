@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar6"
         android:layout_width="0dp"
-        android:layout_height="600dp"
+        android:layout_height="700dp"
         android:background="@drawable/round_userlogin_card"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -34,30 +34,49 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="@string/userRegiName"
+        android:textColor="@color/white"
+        android:textSize="@dimen/registrationPageTiletxtSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:hint="@string/userRegiNameHint"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/myPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_profile_title_bar"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/myPadding"
+        android:paddingRight="@dimen/myPadding"
         android:text="@string/userRegi_title"
-        android:textColor="@color/Blue"
+        android:textColor="@color/lightBlue"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/materialToolbar6"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457"
-        app:srcCompat="@drawable/pngegg" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/button2"
@@ -93,25 +112,25 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/signup_email"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="@dimen/registrationPageTiletxtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
 
     <EditText
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
         android:background="@drawable/round_login_bars"
         android:ems="10"
         android:hint="@string/loginEmail_hint"
         android:inputType="textPersonName"
-        android:paddingLeft="20dp"
+        android:paddingLeft="@dimen/myPadding"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
@@ -125,7 +144,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/signup_pw1"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="@dimen/registrationPageTiletxtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,14 +152,14 @@
 
     <EditText
         android:id="@+id/editTextTextPassword3"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
         android:background="@drawable/round_login_bars"
         android:ems="10"
         android:hint="@string/regiPw_hint"
         android:inputType="textPassword"
-        android:paddingLeft="20dp"
+        android:paddingLeft="@dimen/myPadding"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -148,14 +167,14 @@
 
     <EditText
         android:id="@+id/editTextTextPassword4"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
         android:background="@drawable/round_login_bars"
         android:ems="10"
         android:hint="@string/pw_hint2"
         android:inputType="textPassword"
-        android:paddingLeft="20dp"
+        android:paddingLeft="@dimen/myPadding"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +187,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/regiPw2"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="@dimen/registrationPageTiletxtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
@@ -181,7 +200,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/regi_radio_head"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="@dimen/registrationPageTiletxtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
@@ -189,12 +208,12 @@
 
     <RadioButton
         android:id="@+id/radioButton"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
         android:text="@string/regiRadio1_text"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="@dimen/registrationPageTiletxtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -202,11 +221,11 @@
 
     <RadioButton
         android:id="@+id/radioButton3"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
         android:text="@string/regiRadio2_text"
         android:textColor="@color/white"
-        android:textSize="16dp"
+        android:textSize="@dimen/registrationPageTiletxtSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton" />
