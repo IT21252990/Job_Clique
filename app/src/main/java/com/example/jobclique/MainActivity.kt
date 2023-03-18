@@ -9,44 +9,17 @@ import com.example.jobclique.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+
     fun jobSeekerHome(view: View){
         var intent = Intent(this , JobSeekerAvtivity::class.java)
         startActivity(intent)
     }
 
-//    private lateinit var binding : ActivityMainBinding
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//        replaceFragment(Home())
-//
-//        binding.bottomNavigationView.setOnItemSelectedListener {
-//            when(it.itemId){
-//                R.id.home -> replaceFragment(Home())
-//                R.id.search -> replaceFragment(Search())
-//                R.id.wishlist -> replaceFragment(WishList())
-//                R.id.profile -> replaceFragment(Profile())
-//
-//            else -> {
-//
-//            }
-//
-//            }
-//            true
-//        }
-//    }
-//
-//
-//
-//
-//    private fun replaceFragment(fragment: Fragment){
-//
-//        val fragmentManager = supportFragmentManager
-//        val fragmentTransaction = fragmentManager.beginTransaction()
-//        fragmentTransaction.replace(R.id.frame_layout,fragment)
-//        fragmentTransaction.commit()
-//
-//    }
+    fun userRegistrationPage(view: View){
+        var intent = Intent(this,userRegistrationActivity::class.java)
+    }
 }

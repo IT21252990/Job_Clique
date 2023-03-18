@@ -21,5 +21,21 @@
     <string name="test_btn1_jobseeker">I am Job Seeker</string>
     <string name="text_btn2_employer">I am Employer</string>
     <string name="test_btn3_admin">I am Administrator</string>
+    <string name="login_head">Login</string>
+    <string name="loginpage_email_text">Enter Your Email Address :</string>
+    <string name="loginEmail_hint">Enter Email Here</string>
+    <string name="signup_head">Sign Up</string>
+    <string name="signup_email">Enter Your Email Address :</string>
+    <string name="signup_pw1">Enter Your Password :</string>
+    <string name="regiPw_hint">Enter Password Here</string>
+    <string name="regiPw2">Enter Your Password Again :</string>
+    <string name="pw_hint2">Enter Confirm Password</string>
+    <string name="regi_radio_head">Are you a Job Seeker or an Employer?</string>
+    <string name="regiRadio1_text">Job Seeker: (I want to look and apply for jobs)</string>
+    <string name="regiRadio2_text">Employer: (I want to find great candidates)</string>
+    <string name="regiPage_btnJoinNow">Join Now</string>
+    <string name="haveaccounLoginBtn">Already have an account? Login Here</string>
+    <string name="userRegi_title">Wellcome to JobClique !</string>
+    <string name="btntestSignUp">Sign Up</string>
 
 </resources>
