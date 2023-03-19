@@ -230,7 +230,7 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar7" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/deleteMyAccountemp"
         android:layout_width="@dimen/profileNavigateBtnWidth"
         android:layout_height="@dimen/profileNagigateBtnHeight"
         android:background="@drawable/round_profile_navigation_btn"
@@ -239,20 +239,21 @@
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/button13"
         app:layout_constraintEnd_toStartOf="@+id/button13"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="@dimen/profileNavigateBtnWidth"
         android:layout_height="@dimen/profileNagigateBtnHeight"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/round_profile_navigation_btn"
         android:text="@string/btnProfileLogOut"
         android:textColor="@color/lightBlue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintStart_toEndOf="@+id/deleteMyAccountemp"
         app:layout_constraintTop_toBottomOf="@+id/button11" />
 
     <EditText

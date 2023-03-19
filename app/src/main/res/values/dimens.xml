@@ -20,4 +20,6 @@
     <dimen name="resetPwTitleHeight">80dp</dimen>
     <dimen name="myExtraPadding">30dp</dimen>
     <dimen name="emp_edtTxt_layout_Height">30dp</dimen>
+    <dimen name="dltAccHeadSize">34dp</dimen>
+    <dimen name="dltAccSubTxt">16dp</dimen>
 </resources>

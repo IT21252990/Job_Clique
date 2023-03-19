@@ -21,6 +21,12 @@ class ProfileEmployer : Fragment() {
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.nav_container_emp,fragment)?.commit()
         }
+        val dltAccountemp : Button = view.findViewById(R.id.deleteMyAccountemp)
+        dltAccountemp.setOnClickListener{
+            val fragment = deleteAccount_Confirm()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.nav_container_emp,fragment)?.commit()
+        }
         return view
     }
 
