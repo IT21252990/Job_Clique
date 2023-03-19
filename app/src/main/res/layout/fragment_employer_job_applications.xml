@@ -23,11 +23,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
             android:text="@string/se_job_title"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView107"
@@ -36,7 +37,9 @@
             android:layout_marginTop="11dp"
             android:text="10 New Applications"
             android:textColor="@color/LightBlue2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView106"
+            app:layout_constraintVertical_bias="0.181"
             tools:layout_editor_absoluteX="82dp" />
 
         <Button
@@ -69,20 +72,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:text="@string/se_job_title"
+            android:layout_marginTop="16dp"
+            android:text="Network Engineer"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="11dp"
-            android:text="10 New Applications"
+            android:text="2 New Applications"
             android:textColor="@color/LightBlue2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView110"
+            app:layout_constraintVertical_bias="0.181"
             tools:layout_editor_absoluteX="82dp" />
 
         <Button
@@ -115,20 +121,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:text="@string/se_job_title"
+            android:layout_marginTop="8dp"
+            android:text="UI/UX Designers"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView115"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="10 New Applications"
+            android:text="15 New Applications"
             android:textColor="@color/LightBlue2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView114"
+            app:layout_constraintVertical_bias="0.111"
             tools:layout_editor_absoluteX="82dp" />
 
         <Button
@@ -160,22 +169,25 @@
             android:id="@+id/textView118"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="@string/se_job_title"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:text="Junior Software Engineer"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView119"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="10 New Applications"
+            android:text="20 New Applications"
             android:textColor="@color/LightBlue2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView118"
-            tools:layout_editor_absoluteX="80dp" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="81dp" />
 
         <Button
             android:id="@+id/button120"
@@ -195,7 +207,7 @@
         android:id="@+id/textView19"
         android:layout_width="match_parent"
         android:layout_height="@dimen/search_tv_height"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:background="@color/darkBlue"
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
@@ -214,7 +226,7 @@
         android:id="@+id/tvJobSubHead"
         android:layout_width="match_parent"
         android:layout_height="33dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="28dp"
         android:background="@color/darkBlue"
         android:gravity="center_vertical"
         android:paddingStart="20dp"
@@ -223,7 +235,7 @@
         android:textColor="@color/white"
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/textView44"
-        tools:layout_editor_absoluteX="1dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/textView44"
@@ -254,11 +266,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
             android:text="@string/se_job_title"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView103"
@@ -267,7 +280,9 @@
             android:layout_marginTop="12dp"
             android:text="10 New Applications"
             android:textColor="@color/LightBlue2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView102"
+            app:layout_constraintVertical_bias="0.1"
             tools:layout_editor_absoluteX="81dp" />
 
         <Button
@@ -300,12 +315,13 @@
             android:id="@+id/textView131"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="16dp"
             android:text="@string/se_job_title"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="16dp" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView132"
@@ -314,7 +330,9 @@
             android:layout_marginTop="11dp"
             android:text="10 New Applications"
             android:textColor="@color/LightBlue2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView131"
+            app:layout_constraintVertical_bias="0.181"
             tools:layout_editor_absoluteX="82dp" />
 
         <Button
