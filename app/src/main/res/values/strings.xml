@@ -45,6 +45,7 @@
     <string name="appli_button">See</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">JobClique</string>
 
 
 </resources>
