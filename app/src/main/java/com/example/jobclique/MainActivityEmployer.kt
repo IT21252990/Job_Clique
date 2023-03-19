@@ -20,7 +20,7 @@ class MainActivityEmployer : AppCompatActivity() {
             when(it.itemId){
                 R.id.home -> replaceFragment(HomeEmployer())
                 R.id.search -> replaceFragment(Jobs())
-                R.id.wishlist -> replaceFragment(Notifications())
+                R.id.wishlist -> replaceFragment(applications())
                 R.id.profile -> replaceFragment(ProfileEmployer())
 
                 else -> {

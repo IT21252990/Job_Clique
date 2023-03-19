@@ -4,7 +4,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notifications" >
+    tools:context=".applications">
 
     <TextView
         android:id="@+id/textView19"
@@ -17,7 +17,7 @@
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="10"
-        android:text="@string/Employer_Notifi_Title"
+        android:text="@string/Employer_Appli_Title"
         android:textColor="@color/lightBlue"
         android:textSize="@dimen/txt_size_heading"
         android:textStyle="bold"
@@ -36,5 +36,37 @@
         android:textSize="14dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardView"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="182dp">
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

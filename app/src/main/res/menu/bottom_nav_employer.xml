@@ -9,9 +9,9 @@
         android:id="@+id/Posts"
         android:icon="@drawable/posts" />
 
-    <item android:title="Notifications"
+    <item android:title="Applications"
         android:id="@+id/Notifications"
-        android:icon="@drawable/notifications"/>
+        android:icon="@drawable/applications"/>
 
     <item android:title="Profile"
         android:id="@+id/profile"
