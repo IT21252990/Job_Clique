@@ -44,8 +44,9 @@
         android:background="@color/darkBlue"
         android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView309"
-        tools:layout_editor_absoluteX="20dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView309">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -63,14 +64,17 @@
             android:id="@+id/textView49"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="63dp"
             android:layout_marginBottom="12dp"
             android:text="Vihangi Rathnayake"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/textView54"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="132dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView54"
@@ -151,8 +155,9 @@
         android:background="@color/darkBlue"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView300"
-        tools:layout_editor_absoluteX="20dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView300">
 
         <ImageView
             android:id="@+id/imageView310"
@@ -170,14 +175,17 @@
             android:id="@+id/textView311"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="66dp"
             android:layout_marginBottom="12dp"
             android:text="Kalinga Jayathilaka"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/textView312"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="131dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView310"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView312"
@@ -264,8 +272,9 @@
         android:background="@color/darkBlue"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView309"
-        app:layout_constraintTop_toBottomOf="@+id/textView39"
-        tools:layout_editor_absoluteX="18dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39">
 
         <ImageView
             android:id="@+id/imageView301"
@@ -283,14 +292,17 @@
             android:id="@+id/textView302"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="105dp"
             android:layout_marginBottom="12dp"
             android:text="Viduni Herath"
             android:textColor="@color/lightBlue"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/textView303"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="143dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView301"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView303"
