@@ -18,10 +18,10 @@ class MainActivityEmployer : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
-                R.id.home -> replaceFragment(HomeEmployer())
-                R.id.search -> replaceFragment(Jobs())
-                R.id.wishlist -> replaceFragment(applications())
-                R.id.profile -> replaceFragment(ProfileEmployer())
+                R.id.emphome -> replaceFragment(HomeEmployer())
+                R.id.empPosts -> replaceFragment(Jobs())
+                R.id.empApplications -> replaceFragment(EmployerJobApplications())
+                R.id.empprofile -> replaceFragment(ProfileEmployer())
 
                 else -> {
 

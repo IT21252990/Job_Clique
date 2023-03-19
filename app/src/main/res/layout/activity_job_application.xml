@@ -54,6 +54,7 @@
         android:textAlignment="gravity"
         android:textColor="@color/darkBlue"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintTop_toBottomOf="@+id/tvJobSubHead"
         tools:layout_editor_absoluteX="1dp" />
