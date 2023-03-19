@@ -104,6 +104,9 @@
     <string name="empProfilePhnNum">My Mobile Number :</string>
     <string name="empProfilePhn">+94761760579</string>
     <string name="empProfileBtnMyJobPost">My Job Posts</string>
+    <string name="approveBtn">Approve</string>
+    <string name="declineBtn">Decline</string>
+    <string name="tvReqPostDesc">Description about the requested posts</string>
 
 
 </resources>

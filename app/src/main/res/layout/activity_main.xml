@@ -52,6 +52,7 @@
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:background="@color/darkBlue"
+        android:onClick="ReqApproval"
         android:text="@string/test_btn3_admin"
         android:textColor="@color/white"
         android:textStyle="bold"

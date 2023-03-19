@@ -38,4 +38,9 @@ class MainActivity : AppCompatActivity() {
         var intent = Intent(this,MainActivityEmployer::class.java)
         startActivity(intent)
     }
+
+    fun ReqApproval(view: View){
+        var intent = Intent(this, requestApproval::class.java)
+        startActivity(intent)
+    }
 }
