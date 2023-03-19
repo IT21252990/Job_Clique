@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Notifications">
+    tools:context=".Notifications" >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView19"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/search_tv_height"
+        android:background="@color/darkBlue"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="@string/Employer_Notifi_Title"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/txt_size_heading"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="0dp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvJobSubHead"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="@color/darkBlue"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="Virtusa Private ltd"
+        android:textAlignment="gravity"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
