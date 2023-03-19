@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".JobApplication">
 
+
     <TextView
         android:id="@+id/tvJobTitle"
         android:layout_width="match_parent"
@@ -14,21 +15,20 @@
         android:background="@color/darkBlue"
         android:gravity="bottom|top"
         android:paddingStart="20dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
         android:text="@string/se_job_title"
         android:textAlignment="gravity"
         android:textColor="@color/white"
         android:textSize="@dimen/txt_size_heading"
         android:textStyle="bold"
-        android:shadowColor="@color/black"
-        android:shadowDx="10"
-        android:shadowDy="10"
-        android:shadowRadius="10"
-        app:layout_constraintBottom_toTopOf="@+id/tvJobSubHead"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/tvJobSubHead"
@@ -41,7 +41,6 @@
         android:textAlignment="gravity"
         android:textColor="@color/white"
         android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/tvJobTitle"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -55,35 +54,33 @@
         android:textColor="@color/darkBlue"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/tvJobSubHead"
+        app:layout_constraintBottom_toTopOf="@+id/cardApplication"
+        app:layout_constraintTop_toBottomOf="@+id/tvJobTitle"
         tools:layout_editor_absoluteX="1dp" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="match_parent"
-        android:layout_height="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="408dp"
+        android:layout_height="23dp"
         android:gravity="center_horizontal|top"
         android:text="Applications Closing : Sun, 16 Apr 2023"
         android:textAlignment="gravity"
         android:textColor="@color/darkBlue"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardApplication"
+        android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         tools:layout_editor_absoluteX="1dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardApplication"
-        android:layout_width="380dp"
-        android:layout_height="450dp"
-        android:background="@color/darkBlue"
+        android:layout_width="376dp"
+        android:layout_height="549dp"
+        android:background="@drawable/searchview_background"
         app:cardBackgroundColor="@color/transparentDarkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13">
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <TextView
             android:id="@+id/textView11"
@@ -95,7 +92,7 @@
             android:textSize="@dimen/application_text_size"
             app:layout_constraintBottom_toTopOf="@+id/textView14"
             app:layout_constraintEnd_toStartOf="@+id/btnChooseFile"
-            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintHorizontal_bias="0.769"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
 
