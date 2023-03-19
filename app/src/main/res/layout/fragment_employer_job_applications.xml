@@ -207,7 +207,7 @@
         android:id="@+id/textView19"
         android:layout_width="match_parent"
         android:layout_height="@dimen/search_tv_height"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="44dp"
         android:background="@color/darkBlue"
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
@@ -220,7 +220,7 @@
         android:textSize="@dimen/txt_size_heading"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="33dp" />
 
     <TextView
         android:id="@+id/tvJobSubHead"
@@ -286,7 +286,7 @@
             tools:layout_editor_absoluteX="81dp" />
 
         <Button
-            android:id="@+id/button104"
+            android:id="@+id/btnSeeApplications"
             android:layout_width="63dp"
             android:layout_height="28dp"
             android:layout_marginEnd="48dp"
