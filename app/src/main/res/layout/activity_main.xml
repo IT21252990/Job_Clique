@@ -41,23 +41,11 @@
         android:text="@string/test_btn1_jobseeker"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnEmployerMenu"
+        app:layout_constraintBottom_toTopOf="@+id/button16"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
-
-    <Button
-        android:id="@+id/btnEmployerMenu"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:background="@color/darkBlue"
-        android:text="@string/text_btn2_employer"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnAdminMenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnjobSeekerMenu" />
 
     <Button
         android:id="@+id/btnAdminMenu"
@@ -69,8 +57,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEmployerMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/button16" />
 
     <Button
         android:id="@+id/button3"
@@ -83,6 +72,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnAdminMenu" />
 
@@ -97,6 +87,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -108,8 +99,9 @@
         android:onClick="employerRegiPartTwo"
         android:text="@string/btnTestEmpRegiPart2"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button16"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
@@ -121,10 +113,11 @@
         android:onClick="employerHome"
         android:text="@string/employerHome"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdminMenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/btnjobSeekerMenu" />
 
     <TextView
         android:id="@+id/textView33"
