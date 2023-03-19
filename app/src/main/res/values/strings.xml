@@ -107,6 +107,11 @@
     <string name="approveBtn">Approve</string>
     <string name="declineBtn">Decline</string>
     <string name="tvReqPostDesc">Description about the requested posts</string>
+    <string name="dltAccHead">Delete Account ?</string>
+    <string name="dltAccountTxt1">You\'ll permanently lose your Account</string>
+    <string name="dltAccSunTxt2">This Action Can Not Be Undo</string>
+    <string name="dlt_acc_Cancel">CANCEL</string>
+    <string name="dlt_acc_btn_dlete">DELETE</string>
 
 
 </resources>
