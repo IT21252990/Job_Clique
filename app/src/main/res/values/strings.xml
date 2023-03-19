@@ -15,8 +15,12 @@
     <string name="signup">Sign Up</string>
     <string name="login">Login</string>
     <string name="addPost">Click here to Add New Post</string>
-    <string name="Addpost">Click here to send a Requst to Add New Post!</string>
     <string name="PostRequest">Request to Add New Post</string>
+    <string name="postStatus" />
+    <string name="jobName">Job Name</string>
+    <string name="jobEmail">Email</string>
+    <string name="jobDescrip">Job Discription</string>
+    <string name="jobImage" />
 
 
 </resources>

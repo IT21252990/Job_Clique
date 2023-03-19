@@ -12,6 +12,12 @@
         android:theme="@style/Theme.JobClique"
         tools:targetApi="31">
         <activity
+            android:name=".addPost"
+            android:exported="false" />
+        <activity
+            android:name=".postPayment"
+            android:exported="false" />
+        <activity
             android:name=".MainActivityEmployer"
             android:exported="false" />
         <activity
