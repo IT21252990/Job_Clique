@@ -9,6 +9,8 @@
     <string name="hello_Profile">Hello Profile</string>
     <string name="hello_WishList">Hello Wish List</string>
     <string name="hello_Search">Hello Search</string>
+
+    <!--    wishlist-->
     <string name="wish_list_header">My Wish List</string>
     <string name="wishlist_itemhead1">AIA Wealth Planner\'s Manager</string>
     <string name="wishlist_subhead1">AIA Insurance</string>
@@ -18,13 +20,30 @@
     <string name="wishlist_subHead3">Allianz Insurance Lanka Limited</string>
     <string name="wishlist_itemHead4">Business Analyst</string>
     <string name="wishlist_subhead4">Virtusa (Pvt.) Ltd</string>
+
+    <!--    testButtons-->
     <string name="test_btn1_jobseeker">I am Job Seeker</string>
     <string name="text_btn2_employer">I am Employer</string>
     <string name="test_btn3_admin">I am Administrator</string>
+    <string name="btnTestEmpRegiPart2">Employer Registration Prat 2</string>
+    <string name="employerHome">Employer Home</string>
+
+
+    <!--    login-->
     <string name="login_head">Login</string>
     <string name="loginpage_email_text">Enter Your Email Address :</string>
     <string name="loginEmail_hint">Enter Email Here</string>
+    <string name="userloginpw_head">Enter Your Password :</string>
+    <string name="login_rememberMe_text">Remember me</string>
+    <string name="btnlogin_text">Login</string>
+    <string name="loginForgot_pw"><a href="">Forgot password?</a></string>
+    <string name="loginRegiLink">Don\'t have an account? <a href="">Sign up here</a></string>
+    <string name="btntestLogin">Login</string>
+
+    <!--    signup-->
     <string name="signup_head">Sign Up</string>
+    <string name="userRegiName">Enter Your Name :</string>
+    <string name="userRegiNameHint">Enter Name Here</string>
     <string name="signup_email">Enter Your Email Address :</string>
     <string name="signup_pw1">Enter Your Password :</string>
     <string name="regiPw_hint">Enter Password Here</string>
@@ -37,12 +56,8 @@
     <string name="haveaccounLoginBtn">Already have an account? <a href="">Login Here</a></string>
     <string name="userRegi_title">Welcome to JobClique !</string>
     <string name="btntestSignUp">Sign Up</string>
-    <string name="userloginpw_head">Enter Your Password :</string>
-    <string name="login_rememberMe_text">Remember me</string>
-    <string name="btnlogin_text">Login</string>
-    <string name="loginForgot_pw"><a href="">Forgot password?</a></string>
-    <string name="loginRegiLink">Don\'t have an account? <a href="">Sign up here</a></string>
-    <string name="btntestLogin">Login</string>
+
+    <!--    employer Registration P2-->
     <string name="eployerRegi_title">Create a New Company Account</string>
     <string name="emplyerNextSubTitle">Create your company account to post Job Ads with JobClique</string>
     <string name="empRegiNPartCName">Your Company Name :</string>
@@ -53,11 +68,10 @@
     <string name="empregiphnNumhint">Enter Phone Number</string>
     <string name="cancelempcompanyAddbtn">Cancel this ! I\'m Job Seeker</string>
     <string name="empCompanyCreatebtn">Create Account</string>
-    <string name="btnTestEmpRegiPart2">Employer Registration Prat 2</string>
+
+    <!--    jobseeker Profile-->
     <string name="jobseeker_profile_header">My Profile</string>
     <string name="jobseeker_profile_head">Hello Kalinga !</string>
-    <string name="userRegiName">Enter Your Name :</string>
-    <string name="userRegiNameHint">Enter Name Here</string>
     <string name="profileEdtNameTitle">My Name :</string>
     <string name="profileEdtMyName">Kalinga</string>
     <string name="profileMyEmailTitle">My Email :</string>
@@ -68,8 +82,12 @@
     <string name="btnProfileWistList">My Wish List</string>
     <string name="btnProfile_Appliedjobs">Applied Jobs</string>
     <string name="btnProfileLogOut">Logout</string>
+    <string name="profileDlt">Delete My Account</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_ResetPassword_fragment">Hello Kalinga You are in reset fragment</string>
+
+    <!--    user reset Password-->
     <string name="reSetPwHead">Reset My Password</string>
     <string name="resetPwcurrentPw">Enter Current Password :</string>
     <string name="resetPwNewPw">Enter New Password :</string>
@@ -79,6 +97,13 @@
     <string name="ConfirmPwHint">Enter Confirm Password Here</string>
     <string name="btnResetPw">Reset Password</string>
     <string name="btnResetPwCancel">Cancel</string>
-    <string name="profileDlt">Delete My Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empProfileEdtcomName">My Company Name :</string>
+    <string name="procomname">Virtusa Pvt (Ltd)</string>
+    <string name="empProfilePhnNum">My Mobile Number :</string>
+    <string name="empProfilePhn">+94761760579</string>
+    <string name="empProfileBtnMyJobPost">My Job Posts</string>
+
 
 </resources>

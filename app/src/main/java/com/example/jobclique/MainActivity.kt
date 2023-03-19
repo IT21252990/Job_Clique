@@ -33,4 +33,9 @@ class MainActivity : AppCompatActivity() {
         var intent = Intent(this,EmployerRegistrationNextPart::class.java)
         startActivity(intent)
     }
+
+    fun employerHome(view: View){
+        var intent = Intent(this,MainActivityEmployer::class.java)
+        startActivity(intent)
+    }
 }

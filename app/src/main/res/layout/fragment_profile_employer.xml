@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightBlue"
-    tools:context=".Profile">
+    tools:context=".ProfileEmployer">
 
     <TextView
         android:id="@+id/textView26"
@@ -31,7 +31,7 @@
         android:id="@+id/textView28"
         android:layout_width="290dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/round_profile_title_bar"
         android:gravity="center_vertical"
         android:paddingLeft="@dimen/myPadding"
@@ -53,7 +53,7 @@
         android:id="@+id/imageView14"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/profile_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.532"
@@ -63,8 +63,8 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar7"
         android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
         android:background="@color/Blue"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -93,7 +93,7 @@
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:text="@string/profileEdtNameTitle"
         android:textColor="@color/lightBlue"
         android:textSize="@dimen/profile_Title_txt"
@@ -102,11 +102,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empProfileEdtcomName"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/profile_Title_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/empProfilePhnNum"
+        android:textColor="@color/lightBlue"
+        android:textSize="@dimen/profile_Title_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="@dimen/profileLayoutWidth"
-        android:layout_height="@dimen/profileLayoutHeight"
-        android:layout_marginTop="5dp"
+        android:layout_height="@dimen/emp_edtTxt_layout_Height"
+        android:layout_marginTop="2dp"
         android:background="@drawable/round_login_bars"
         android:ems="10"
         android:inputType="textPersonName"
@@ -117,11 +143,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
 
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="@dimen/profileLayoutWidth"
+        android:layout_height="@dimen/emp_edtTxt_layout_Height"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/myPadding"
+        android:text="@string/procomname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
     <TextView
         android:id="@+id/textView31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:text="@string/profileMyEmailTitle"
         android:textColor="@color/lightBlue"
         android:textSize="@dimen/profile_Title_txt"
@@ -133,8 +174,8 @@
     <EditText
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="@dimen/profileLayoutWidth"
-        android:layout_height="@dimen/profileLayoutHeight"
-        android:layout_marginTop="5dp"
+        android:layout_height="@dimen/emp_edtTxt_layout_Height"
+        android:layout_marginTop="2dp"
         android:background="@drawable/round_login_bars"
         android:ems="10"
         android:inputType="textPersonName"
@@ -148,7 +189,7 @@
         android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:background="@color/yellow"
         android:paddingLeft="@dimen/myPadding"
         android:paddingRight="@dimen/myPadding"
@@ -156,10 +197,11 @@
         android:textColor="@color/black"
         android:textSize="16dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnResetPwemp"
@@ -179,7 +221,7 @@
         android:layout_height="@dimen/profileNagigateBtnHeight"
         android:layout_marginTop="10dp"
         android:background="@drawable/round_profile_navigation_btn"
-        android:text="@string/btnProfileWistList"
+        android:text="@string/empProfileBtnMyJobPost"
         android:textColor="@color/lightBlue"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -192,7 +234,7 @@
         android:layout_width="@dimen/profileNavigateBtnWidth"
         android:layout_height="@dimen/profileNagigateBtnHeight"
         android:background="@drawable/round_profile_navigation_btn"
-        android:text="@string/btnProfile_Appliedjobs"
+        android:text="@string/profileDlt"
         android:textColor="@color/lightBlue"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/button13"
@@ -213,20 +255,19 @@
         app:layout_constraintStart_toEndOf="@+id/button12"
         app:layout_constraintTop_toBottomOf="@+id/button11" />
 
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_profile_navigation_btn"
+    <EditText
+        android:id="@+id/editTextTextPersonName9"
+        android:layout_width="@dimen/profileLayoutWidth"
+        android:layout_height="@dimen/emp_edtTxt_layout_Height"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:paddingLeft="@dimen/myPadding"
-        android:paddingRight="@dimen/myPadding"
-        android:text="@string/profileDlt"
-        android:textColor="@color/lightBlue"
-        android:textStyle="bold"
+        android:text="@string/empProfilePhn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
