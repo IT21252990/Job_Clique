@@ -14,13 +14,13 @@ class MainActivityEmployer : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainEmployerBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(Home())
+        replaceFragment(PostsJobs())
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
 
-                R.id.emphome -> replaceFragment(HomeEmployer())
-                R.id.empPosts -> replaceFragment(Jobs())
+                R.id.emphome -> replaceFragment(PostsJobs())
+                R.id.empPosts -> replaceFragment(addPost())
                 R.id.empApplications -> replaceFragment(EmployerJobApplications())
                 R.id.profile -> replaceFragment(ProfileEmployer())
 

@@ -19,7 +19,7 @@ class PostsJobs : Fragment() {
         requestB.setOnClickListener{
             val fragment = addPost()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.bottomNavigationView, fragment)?.commit()
+            transaction?.replace(R.id.frame_layout_employer, fragment)?.commit()
         }
         return view
     }
