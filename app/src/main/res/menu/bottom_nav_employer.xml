@@ -13,9 +13,9 @@
     <item android:title="Applications"
         android:id="@+id/empApplications"
         android:icon="@drawable/applications"/>
-
+ 
     <item android:title="Profile"
-        android:id="@+id/empprofile"
+        android:id="@+id/profile"
         android:icon="@drawable/unselected_profile"/>
 
 </menu>

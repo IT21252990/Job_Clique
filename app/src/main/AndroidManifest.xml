@@ -23,6 +23,28 @@
         <activity
             android:name=".MainActivityJobApplication"
             android:exported="false" />
+            
+        <activity
+            android:name=".requestApproval"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityEmployer"
+            android:exported="false" />
+        <activity
+            android:name=".JobSeekerProfile"
+            android:exported="false" />
+        <activity
+            android:name=".EmployerRegistrationNextPart"
+            android:exported="false" />
+        <activity
+            android:name=".userRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".JobSeekerAvtivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
