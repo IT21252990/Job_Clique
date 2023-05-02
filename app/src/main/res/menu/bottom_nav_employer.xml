@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
+        android:title="Home"
+        android:id="@+id/emphome"
         android:icon="@drawable/selected_home"
-        android:title="Home" />
+         />
 
     <item android:title="Posts"
-        android:id="@+id/Posts"
+        android:id="@+id/empPosts"
         android:icon="@drawable/posts" />
 
     <item android:title="Applications"
-        android:id="@+id/Notifications"
+        android:id="@+id/empApplications"
         android:icon="@drawable/applications"/>
-
+ 
     <item android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/unselected_profile"/>

@@ -7,6 +7,15 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/btnAcceptApplications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:text="Admin-Accept Applications"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+
     <!--    <FrameLayout-->
     <!--        android:id="@+id/frame_layout"-->
     <!--        android:layout_width="0dp"-->
@@ -42,9 +51,33 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button16"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/btnAppliedJobs" />
+
+    <Button
+        android:id="@+id/btnJobApplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:text="Apply for a job"
+        app:layout_constraintBottom_toTopOf="@+id/btnAppliedJobs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnJobSeekerHome" />
+
+    <Button
+        android:id="@+id/btnAppliedJobs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:text="Applied jobs"
+        android:textColor="@color/lightBlue"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcceptApplications"
+
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
     <Button
@@ -101,9 +134,26 @@
         android:text="@string/btnTestEmpRegiPart2"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/btnJobApplication" />
+
+    <Button
+        android:id="@+id/btnJobSeekerHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:text="Job Seeker Home"
+        android:textColor="@color/lightBlue"
+        app:layout_constraintBottom_toTopOf="@+id/btnJobApplication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
@@ -134,4 +184,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

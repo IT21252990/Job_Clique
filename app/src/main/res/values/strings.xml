@@ -4,11 +4,49 @@
     <string name="jobApplication">Job application</string>
 
     <string name="login_page">Login Page</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--fragments-->
     <string name="hello_Home">Hello Home</string>
     <string name="hello_Profile">Hello Profile</string>
     <string name="hello_WishList">Hello Wish List</string>
+
+    <!--search -->
     <string name="hello_Search">Hello Search</string>
+    <string name="searchHint">Enter a job title</string>
+
+    <!-- jobs-->
+    <string name="se_job_title">Software Engineer</string>
+
+    <!-- Application -->
+    <string name="Apply_for_this_job">Apply for this job</string>
+    <string name="tv_application_name">Your Name :</string>
+    <string name="tv_application_email">Your Email :</string>
+    <string name="tv_application_pno">Your Phone Number :</string>
+    <string name="tv_application_attach">Attach CV / Resume :</string>
+    <string name="tv_application_nofile">No file chosen</string>
+    <string name="tv_application_addi">Additional Details :</string>
+    <!-- buttons-->
+    <string name="btn_choose_file">Choose File</string>
+    <string name="btn_application_send">Send Application</string>
+    <!-- hints-->
+    <string name="application_hint_name">Enter your name here</string>
+    <string name="application_hint_email">Enter your email here</string>
+    <string name="application_hint_phnno">Enter your phone number here</string>
+    <string name="application_hint_addi">(Optional)</string>
+
+    <!--Applied Jobs-->
+    <string name="Applied_Jobs_Title">Applied Jobs List</string>
+    <string name="Applied_jobs_description"> A list of job vacancies you have applied.</string>
+
+    <!--Received applications-->
+    <string name="Employer_Notifi_Title">Notifications</string>
+    <string name="Employer_Appli_Title">Received Applications</string>
+    <string name="Appli_desc">Open Positions</string>
+    <string name="appli_button">See</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">JobClique</string>
 
     <!--    wishlist-->
     <string name="wish_list_header">My Wish List</string>
