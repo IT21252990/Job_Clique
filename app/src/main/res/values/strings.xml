@@ -151,7 +151,6 @@
     <string name="dlt_acc_btn_dlete">DELETE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="iamEmployer">I AM EMPLOYER</string>
     <string name="tvNoitfyRequests">Requests</string>
     <string name="request_1" />
