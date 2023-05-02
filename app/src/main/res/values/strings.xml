@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">jobClique</string>
 
+
     <string name="jobApplication">Job application</string>
 
     <string name="login_page">Login Page</string>
@@ -150,6 +151,7 @@
     <string name="dltAccSunTxt2">This Action Can Not Be Undo</string>
     <string name="dlt_acc_Cancel">CANCEL</string>
     <string name="dlt_acc_btn_dlete">DELETE</string>
+
 
 
 </resources>
