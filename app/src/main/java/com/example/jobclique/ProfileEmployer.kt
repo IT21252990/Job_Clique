@@ -20,13 +20,13 @@ class ProfileEmployer : Fragment() {
         resetButton.setOnClickListener{
             val fragment = resetPassword()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.nav_container_emp,fragment)?.commit()
+            transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
         }
         val dltAccountemp : Button = view.findViewById(R.id.deleteMyAccountemp)
         dltAccountemp.setOnClickListener{
             val fragment = deleteAccount_Confirm()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.nav_container_emp,fragment)?.commit()
+            transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
         }
         return view
     }

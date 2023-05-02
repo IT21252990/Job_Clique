@@ -136,7 +136,6 @@
     <string name="btnResetPw">Reset Password</string>
     <string name="btnResetPwCancel">Cancel</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="empProfileEdtcomName">My Company Name :</string>
     <string name="procomname">Virtusa Pvt (Ltd)</string>
     <string name="empProfilePhnNum">My Mobile Number :</string>
@@ -150,6 +149,28 @@
     <string name="dltAccSunTxt2">This Action Can Not Be Undo</string>
     <string name="dlt_acc_Cancel">CANCEL</string>
     <string name="dlt_acc_btn_dlete">DELETE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iamEmployer">I AM EMPLOYER</string>
+    <string name="tvNoitfyRequests">Requests</string>
+    <string name="request_1" />
+    <string name="requestNotify">Requests</string>
+    <string name="Approvebtn">Approve</string>
+    <string name="Declinebtn">Decline</string>
+    <string name="jobSeeker" />
+    <string name="employer" />
+    <string name="admin">Admin</string>
+    <string name="testempreg">eReg</string>
+    <string name="signup">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="addPost">Click here to Add New Post</string>
+    <string name="PostRequest">Request to Add New Post</string>
+    <string name="postStatus" />
+    <string name="jobName">Job Name</string>
+    <string name="jobEmail">Email</string>
+    <string name="jobDescrip">Job Discription</string>
+    <string name="jobImage" />
 
 
 </resources>

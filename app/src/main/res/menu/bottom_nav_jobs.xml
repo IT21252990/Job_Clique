@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home"
+          android:id="@+id/jobsHome"
+          android:icon="@drawable/jobs_home"/>
+
+    <item android:title="Posts"
+          android:id="@+id/jobsPosts"
+          android:icon="@drawable/jobs_posts" />
+
+    <item android:title="Notifications"
+          android:id="@+id/jobsNotify"
+          android:icon="@drawable/jobs_notify"/>
+
+    <item android:title="Profile"
+          android:id="@+id/jobsProfile"
+          android:icon="@drawable/jobs_profile"/>
+</menu>
