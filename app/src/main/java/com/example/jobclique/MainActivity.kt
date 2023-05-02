@@ -16,63 +16,54 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        var btnJobSeekerHome = findViewById<Button>(R.id.btnJobSeekerHome)
-        btnJobSeekerHome.setOnClickListener {
-            var intent = Intent(this,MainActivityJobApplication::class.java)
-            startActivity(intent)
-            finish()
-        }
-
         var btnJobApplication = findViewById<Button>(R.id.btnJobApplication)
         btnJobApplication.setOnClickListener {
-            var intent = Intent(this,JobApplication::class.java)
+            var intent = Intent(this, JobApplication::class.java)
             startActivity(intent)
             finish()
         }
 
-        var btnAppliedJobs = findViewById<Button>(R.id.btnAppliedJobs)
-        btnAppliedJobs.setOnClickListener {
-            var intent = Intent(this,MainActivityJobApplication::class.java)
+
+        var jobSeekerHome = findViewById<Button>(R.id.btnjobSeekerMenu)
+        jobSeekerHome.setOnClickListener {
+            var intent = Intent(this, JobSeekerAvtivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        var btnAcceptApplications = findViewById<Button>(R.id.btnAcceptApplications)
-        btnAcceptApplications.setOnClickListener {
-            var intent = Intent(this,MainActivityEmployer::class.java)
+        var employerHome = findViewById<Button>(R.id.btnEmployer)
+        employerHome.setOnClickListener {
+            var intent = Intent(this, MainActivityEmployer::class.java)
             startActivity(intent)
             finish()
         }
 
-      fun jobSeekerHome(view: View){
-          var intent = Intent(this , JobSeekerAvtivity::class.java)
-          startActivity(intent)
-      }
+        var userRegistrationPage = findViewById<Button>(R.id.btnRegister)
+        userRegistrationPage.setOnClickListener {
+            var intent = Intent(this, userRegistrationActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
-      fun userRegistrationPage(view: View){
-          var intent = Intent(this,userRegistrationActivity::class.java)
-          startActivity(intent)
-      }
+        var userLoginPage = findViewById<Button>(R.id.btnLogin)
+        userLoginPage.setOnClickListener {
+            var intent = Intent(this, userLoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
-      fun userLoginPage(view: View){
-          var intent = Intent(this,userLoginActivity::class.java)
-          startActivity(intent)
-      }
+        var employerRegiPartTwo = findViewById<Button>(R.id.btnEmpRegiPart2)
+        employerRegiPartTwo.setOnClickListener {
+            var intent = Intent(this, EmployerRegistrationNextPart::class.java)
+            startActivity(intent)
+            finish()
+        }
 
-      fun employerRegiPartTwo(view: View){
-          var intent = Intent(this,EmployerRegistrationNextPart::class.java)
-          startActivity(intent)
-      }
-
-      fun employerHome(view: View){
-          var intent = Intent(this,MainActivityEmployer::class.java)
-          startActivity(intent)
-      }
-
-      fun ReqApproval(view: View){
-          var intent = Intent(this, requestApproval::class.java)
-          startActivity(intent)
-      }
-
+        var ReqApproval = findViewById<Button>(R.id.btnAdminMenu)
+        ReqApproval.setOnClickListener {
+            var intent = Intent(this, requestApproval::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 }

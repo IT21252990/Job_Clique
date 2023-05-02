@@ -22,7 +22,7 @@ class MainActivityEmployer : AppCompatActivity() {
                 R.id.emphome -> replaceFragment(HomeEmployer())
                 R.id.empPosts -> replaceFragment(Jobs())
                 R.id.empApplications -> replaceFragment(EmployerJobApplications())
-                R.id.empprofile -> replaceFragment(ProfileEmployer())
+                R.id.profile -> replaceFragment(ProfileEmployer())
 
                 else -> {
 
