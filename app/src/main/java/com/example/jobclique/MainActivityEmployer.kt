@@ -18,10 +18,11 @@ class MainActivityEmployer : AppCompatActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
+
                 R.id.emphome -> replaceFragment(HomeEmployer())
                 R.id.empPosts -> replaceFragment(Jobs())
                 R.id.empApplications -> replaceFragment(EmployerJobApplications())
-                R.id.empprofile -> replaceFragment(ProfileEmployer())
+                R.id.profile -> replaceFragment(ProfileEmployer())
 
                 else -> {
 
@@ -31,9 +32,6 @@ class MainActivityEmployer : AppCompatActivity() {
             true
         }
     }
-
-
-
 
     private fun replaceFragment(fragment: Fragment){
 

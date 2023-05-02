@@ -6,50 +6,149 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnAcceptApplications"
-        android:layout_width="wrap_content"
+
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/frame_layout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--    </FrameLayout>-->
+
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottomNavigationView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/darkBlue"-->
+    <!--        app:itemBackground="@null"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:menu="@menu/bottom_nav">-->
+
+
+    <!--    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_500"
-        android:text="Admin-Accept Applications"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:text="Test Menu"
+        android:textColor="@color/black"
+        android:textSize="34dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAppliedJobs" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnjobSeekerMenu"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="jobSeekerHome"
+        android:text="@string/test_btn1_jobseeker"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnJobApplication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmpRegiPart2" />
 
     <Button
         android:id="@+id/btnJobApplication"
-        android:layout_width="wrap_content"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/purple_500"
         android:text="Apply for a job"
-        app:layout_constraintBottom_toTopOf="@+id/btnAppliedJobs"
+        app:layout_constraintBottom_toTopOf="@+id/btnEmployer"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnJobSeekerHome" />
+        app:layout_constraintTop_toBottomOf="@+id/btnjobSeekerMenu" />
 
     <Button
-        android:id="@+id/btnAppliedJobs"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnAdminMenu"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkBlue"
-        android:text="Applied jobs"
-        android:textColor="@color/lightBlue"
-        app:layout_constraintBottom_toTopOf="@+id/btnAcceptApplications"
+        android:background="@color/darkBlue"
+        android:onClick="ReqApproval"
+        android:text="@string/test_btn3_admin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmployer" />
+
+
+    <!--        app:layout_constraintTop_toBottomOf="@+id/button5" />-->
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="userLoginPage"
+        android:text="@string/btntestLogin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="userRegistrationPage"
+        android:text="@string/btntestSignUp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnEmpRegiPart2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnEmpRegiPart2"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="employerRegiPartTwo"
+        android:text="@string/btnTestEmpRegiPart2"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnjobSeekerMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+    <Button
+        android:id="@+id/btnEmployer"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="employerHome"
+        android:text="@string/employerHome"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdminMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnJobApplication" />
-
-    <Button
-        android:id="@+id/btnJobSeekerHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkBlue"
-        android:text="Job Seeker Home"
-        android:textColor="@color/lightBlue"
-        app:layout_constraintBottom_toTopOf="@+id/btnJobApplication"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
