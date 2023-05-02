@@ -1,0 +1,322 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layoutDescription="@xml/fragment_posts_jobs_scene"
+    tools:context=".PostsJobs">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar14"
+        android:layout_width="360dp"
+        android:layout_height="147dp"
+        android:background="@color/lightBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintVertical_bias="0.458" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:autoText="false"
+        android:background="@color/Blue"
+        android:contextClickable="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="my posts"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textIsSelectable="false"
+        android:textSize="@dimen/header_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="53dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="72dp"
+        android:src="@drawable/baseline_post_add_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="@string/addPost"
+        android:onClick="activity_add_post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView18"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar12"
+        android:layout_width="360dp"
+        android:layout_height="147dp"
+        android:background="@color/lightBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.069" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar13"
+        android:layout_width="360dp"
+        android:layout_height="147dp"
+        android:background="@color/lightBlue"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/btnRequest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pexels_caio_64609"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar13"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar13"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar13" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pexels_pixabay_416405"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar12"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar12"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar12"
+        app:layout_constraintVertical_bias="0.433" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/pexels_valeria_boltneva_580613"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar14"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar14"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar14"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <ImageButton
+        android:id="@+id/imageButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar12"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar12"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <ImageButton
+        android:id="@+id/btnDeletepost1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar12"
+        app:layout_constraintHorizontal_bias="0.221"
+        app:layout_constraintStart_toEndOf="@+id/imageButton13"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar12"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <ImageButton
+        android:id="@+id/btnEditpost1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar12"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toEndOf="@+id/btnDeletepost1"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar12"
+        app:layout_constraintVertical_bias="0.149" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar13"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar13"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageButton
+        android:id="@+id/imageButton17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar13"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/imageButton16"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar13"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar13"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toEndOf="@+id/imageButton17"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar13"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageButton
+        android:id="@+id/imageButton19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_star_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar14"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar14"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageButton
+        android:id="@+id/imageButton20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_delete_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar14"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toEndOf="@+id/imageButton19"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar14"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <ImageButton
+        android:id="@+id/imageButton21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar14"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toEndOf="@+id/imageButton20"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar14"
+        app:layout_constraintVertical_bias="0.172" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine8"
+        android:layout_width="199dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:text="description about the job  We offer you a job at our company as an architect."
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar12"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar12"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar13"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar13"
+        app:layout_constraintVertical_bias="0.676" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar14"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar14"
+        app:layout_constraintVertical_bias="0.686" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="74dp"
+        android:layout_height="20dp"
+        android:text="Approved"
+        android:textColor="@color/darkBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar12"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar12"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar12"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine8" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="74dp"
+        android:layout_height="20dp"
+        android:text="Approved"
+        android:textColor="@color/darkBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar13"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar13"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar13"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine9"
+        app:layout_constraintVertical_bias="0.769" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="74dp"
+        android:layout_height="20dp"
+        android:text="Pending"
+        android:textColor="@color/darkBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar14"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar14"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar14"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine10"
+        app:layout_constraintVertical_bias="0.833" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
