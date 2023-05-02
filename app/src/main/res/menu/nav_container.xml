@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Post"
+        android:id="@+id/jobsPosts"
+        android:icon="@drawable/jobs_posts"/>
+
+    <item android:title="New"
+        android:id="@+id/addReq" />
+
+
+</menu>
