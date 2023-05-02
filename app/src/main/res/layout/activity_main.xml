@@ -7,28 +7,131 @@
     tools:context=".MainActivity">
 
 
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!--    <FrameLayout-->
+    <!--        android:id="@+id/frame_layout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
-    </FrameLayout>
+    <!--    </FrameLayout>-->
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottomNavigationView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/darkBlue"-->
+    <!--        app:itemBackground="@null"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:menu="@menu/bottom_nav">-->
+
+
+    <!--    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
+
+    <Button
+        android:id="@+id/btnjobSeekerMenu"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:background="@color/darkBlue"
-        app:itemBackground="@null"
+        android:onClick="jobSeekerHome"
+        android:text="@string/test_btn1_jobseeker"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+    <Button
+        android:id="@+id/btnAdminMenu"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="ReqApproval"
+        android:text="@string/test_btn3_admin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button16" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="userLoginPage"
+        android:text="@string/btntestLogin"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdminMenu" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="userRegistrationPage"
+        android:text="@string/btntestSignUp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="employerRegiPartTwo"
+        android:text="@string/btnTestEmpRegiPart2"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav">
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="411dp"
+        android:layout_height="wrap_content"
+        android:background="@color/darkBlue"
+        android:onClick="employerHome"
+        android:text="@string/employerHome"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdminMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnjobSeekerMenu" />
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Test Menu"
+        android:textColor="@color/black"
+        android:textSize="34dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btnjobSeekerMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

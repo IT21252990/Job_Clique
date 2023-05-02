@@ -10,4 +10,108 @@
     <string name="hello_WishList">Hello Wish List</string>
     <string name="hello_Search">Hello Search</string>
 
+    <!--    wishlist-->
+    <string name="wish_list_header">My Wish List</string>
+    <string name="wishlist_itemhead1">AIA Wealth Planner\'s Manager</string>
+    <string name="wishlist_subhead1">AIA Insurance</string>
+    <string name="wishlist_itemhead2">Call Center Agent</string>
+    <string name="wishlist_subhead">Kapruka Holdings PLC</string>
+    <string name="wishlist_itemhead3">Branch Manager</string>
+    <string name="wishlist_subHead3">Allianz Insurance Lanka Limited</string>
+    <string name="wishlist_itemHead4">Business Analyst</string>
+    <string name="wishlist_subhead4">Virtusa (Pvt.) Ltd</string>
+
+    <!--    testButtons-->
+    <string name="test_btn1_jobseeker">I am Job Seeker</string>
+    <string name="text_btn2_employer">I am Employer</string>
+    <string name="test_btn3_admin">I am Administrator</string>
+    <string name="btnTestEmpRegiPart2">Employer Registration Prat 2</string>
+    <string name="employerHome">I am Employer</string>
+
+
+    <!--    login-->
+    <string name="login_head">Login</string>
+    <string name="loginpage_email_text">Enter Your Email Address :</string>
+    <string name="loginEmail_hint">Enter Email Here</string>
+    <string name="userloginpw_head">Enter Your Password :</string>
+    <string name="login_rememberMe_text">Remember me</string>
+    <string name="btnlogin_text">Login</string>
+    <string name="loginForgot_pw"><a href="">Forgot password?</a></string>
+    <string name="loginRegiLink">Don\'t have an account? <a href="">Sign up here</a></string>
+    <string name="btntestLogin">Login</string>
+
+    <!--    signup-->
+    <string name="signup_head">Sign Up</string>
+    <string name="userRegiName">Enter Your Name :</string>
+    <string name="userRegiNameHint">Enter Name Here</string>
+    <string name="signup_email">Enter Your Email Address :</string>
+    <string name="signup_pw1">Enter Your Password :</string>
+    <string name="regiPw_hint">Enter Password Here</string>
+    <string name="regiPw2">Enter Your Password Again :</string>
+    <string name="pw_hint2">Enter Confirm Password</string>
+    <string name="regi_radio_head">Are you a Job Seeker or an Employer?</string>
+    <string name="regiRadio1_text">Job Seeker: (I want to look and apply for jobs)</string>
+    <string name="regiRadio2_text">Employer: (I want to find great candidates)</string>
+    <string name="regiPage_btnJoinNow">Join Now</string>
+    <string name="haveaccounLoginBtn">Already have an account? <a href="">Login Here</a></string>
+    <string name="userRegi_title">Welcome to JobClique !</string>
+    <string name="btntestSignUp">Sign Up</string>
+
+    <!--    employer Registration P2-->
+    <string name="eployerRegi_title">Create a New Company Account</string>
+    <string name="emplyerNextSubTitle">Create your company account to post Job Ads with JobClique</string>
+    <string name="empRegiNPartCName">Your Company Name :</string>
+    <string name="empRegiCNameSub">This company name will appear in job listings.</string>
+    <string name="Enter_Company_Name">Enter Company Name</string>
+    <string name="empRegiphnnum">Your Phone Number :</string>
+    <string name="empregiaddphnsubhead">Enter your contact number, so we can reach you if we need to improve your results. (This number will NOT appear in job listings.)</string>
+    <string name="empregiphnNumhint">Enter Phone Number</string>
+    <string name="cancelempcompanyAddbtn">Cancel this ! I\'m Job Seeker</string>
+    <string name="empCompanyCreatebtn">Create Account</string>
+
+    <!--    jobseeker Profile-->
+    <string name="jobseeker_profile_header">My Profile</string>
+    <string name="jobseeker_profile_head">Hello Kalinga !</string>
+    <string name="profileEdtNameTitle">My Name :</string>
+    <string name="profileEdtMyName">Kalinga</string>
+    <string name="profileMyEmailTitle">My Email :</string>
+    <string name="profileEditEmail">kalingajayathilaka@gmail.com</string>
+    <string name="profileSveChngeBtn">Save Changes</string>
+    <string name="profileUpdteDetailsTitle">Update My Profile</string>
+    <string name="btnProfileRsetPw">Reset Password</string>
+    <string name="btnProfileWistList">My Wish List</string>
+    <string name="btnProfile_Appliedjobs">Applied Jobs</string>
+    <string name="btnProfileLogOut">Logout</string>
+    <string name="profileDlt">Delete My Account</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_ResetPassword_fragment">Hello Kalinga You are in reset fragment</string>
+
+    <!--    user reset Password-->
+    <string name="reSetPwHead">Reset My Password</string>
+    <string name="resetPwcurrentPw">Enter Current Password :</string>
+    <string name="resetPwNewPw">Enter New Password :</string>
+    <string name="resetPwConfirmPw">Enter Confirm Password :</string>
+    <string name="currPwHint">Enter Current Password Here</string>
+    <string name="newPwHint">Enter New Password Here</string>
+    <string name="ConfirmPwHint">Enter Confirm Password Here</string>
+    <string name="btnResetPw">Reset Password</string>
+    <string name="btnResetPwCancel">Cancel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empProfileEdtcomName">My Company Name :</string>
+    <string name="procomname">Virtusa Pvt (Ltd)</string>
+    <string name="empProfilePhnNum">My Mobile Number :</string>
+    <string name="empProfilePhn">+94761760579</string>
+    <string name="empProfileBtnMyJobPost">My Job Posts</string>
+    <string name="approveBtn">Approve</string>
+    <string name="declineBtn">Decline</string>
+    <string name="tvReqPostDesc">Description about the requested posts</string>
+    <string name="dltAccHead">Delete Account ?</string>
+    <string name="dltAccountTxt1">You\'ll permanently lose your Account</string>
+    <string name="dltAccSunTxt2">This Action Can Not Be Undo</string>
+    <string name="dlt_acc_Cancel">CANCEL</string>
+    <string name="dlt_acc_btn_dlete">DELETE</string>
+
+
 </resources>
