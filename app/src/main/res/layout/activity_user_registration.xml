@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/registerName"
         android:layout_width="@dimen/RegistrationLayoutWidth"
         android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/button2"
+        android:id="@+id/btnGotoLogin"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:background="@color/darkBlue"
@@ -119,10 +119,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/registerName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/registerEmail"
         android:layout_width="@dimen/RegistrationLayoutWidth"
         android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
@@ -148,10 +148,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/registerPassword"
         android:layout_width="@dimen/RegistrationLayoutWidth"
         android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
@@ -166,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
-        android:id="@+id/editTextTextPassword4"
+        android:id="@+id/registerConfirmPassword"
         android:layout_width="@dimen/RegistrationLayoutWidth"
         android:layout_height="@dimen/RagistrationLayoutLength"
         android:layout_marginTop="5dp"
@@ -191,7 +191,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
 
     <TextView
         android:id="@+id/textView17"
@@ -204,7 +204,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword4" />
+        app:layout_constraintTop_toBottomOf="@+id/registerConfirmPassword" />
 
     <RadioButton
         android:id="@+id/radioButton"
@@ -231,7 +231,7 @@
         app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/registerBtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@color/yellow"

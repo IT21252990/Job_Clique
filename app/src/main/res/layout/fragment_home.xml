@@ -231,7 +231,7 @@
                 android:layout_height="wrap_content"
                 android:text="Full Time"
                 android:textColor="@color/darkBlue"
-                app:layout_constraintBottom_toTopOf="@+id/button2"
+                app:layout_constraintBottom_toTopOf="@+id/btnGotoLogin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.228"
                 app:layout_constraintStart_toEndOf="@+id/imageView11"
@@ -261,7 +261,7 @@
                 app:layout_constraintVertical_bias="0.846" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnGotoLogin"
                 android:layout_width="90dp"
                 android:layout_height="26dp"
                 android:layout_marginBottom="16dp"
@@ -315,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:text="Full Time"
                 android:textColor="@color/darkBlue"
-                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintBottom_toTopOf="@+id/registerBtn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.212"
                 app:layout_constraintStart_toEndOf="@+id/imageView93"
@@ -345,7 +345,7 @@
                 app:layout_constraintVertical_bias="0.846" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/registerBtn"
                 android:layout_width="90dp"
                 android:layout_height="26dp"
                 android:background="@drawable/btn_background"
