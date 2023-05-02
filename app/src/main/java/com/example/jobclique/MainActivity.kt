@@ -3,12 +3,11 @@ package com.example.jobclique
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-
-import android.view.View
 
 import androidx.fragment.app.Fragment
 import com.example.jobclique.databinding.ActivityMainBinding
+import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        setContentView(R.layout.activity_main)
 
         var btnJobApplication = findViewById<Button>(R.id.btnJobApplication)
         btnJobApplication.setOnClickListener {
@@ -30,6 +30,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+   // fun jobSeekerHome(view: View){
+    //    var intent = Intent(this , JobSeekerAvtivity::class.java)
+    //    startActivity(intent)
+   // }
+   // fun userRegistrationPage(view: View){
+   //     var intent = Intent(this,userRegistrationActivity::class.java)
+   //     startActivity(intent)
+   // }
+   // fun userLoginPage(view: View){
+    //    var intent = Intent(this,userLoginActivity::class.java)
+     //   startActivity(intent)
+   // }
+  //  fun employerRegiPartTwo(view: View){
+    //    var intent = Intent(this,EmployerRegistrationNextPart::class.java)
+     //   startActivity(intent)
+   // }
 
         var btnAppliedJobs = findViewById<Button>(R.id.btnAppliedJobs)
         btnAppliedJobs.setOnClickListener {
@@ -49,6 +66,10 @@ class MainActivity : AppCompatActivity() {
           var intent = Intent(this , JobSeekerAvtivity::class.java)
           startActivity(intent)
       }
+    fun Employer(view: View){
+        var intent = Intent(this , MainActivityEmployer::class.java)
+        startActivity(intent)
+    }
 
       fun userRegistrationPage(view: View){
           var intent = Intent(this,userRegistrationActivity::class.java)
