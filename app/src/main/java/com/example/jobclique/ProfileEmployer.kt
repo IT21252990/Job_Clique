@@ -28,6 +28,14 @@ class ProfileEmployer : Fragment() {
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
         }
+
+        val logout : Button = view.findViewById(R.id.btnLogout)
+        logout.setOnClickListener{
+            val fragment = logoutAccount_Confirm()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
+        }
+
         return view
     }
 

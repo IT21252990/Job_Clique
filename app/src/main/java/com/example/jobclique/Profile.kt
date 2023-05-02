@@ -26,6 +26,29 @@ class Profile : Fragment() {
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.nav_container,fragment)?.commit()
         }
+
+        val appliedJobs : Button = view.findViewById(R.id.appliedJobs)
+        appliedJobs.setOnClickListener{
+            val fragment = AppliedJobs()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.nav_container,fragment)?.commit()
+        }
+
+        val myWistList : Button = view.findViewById(R.id.btnMyWishlist)
+        myWistList.setOnClickListener{
+            val fragment = WishList()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.nav_container,fragment)?.commit()
+        }
+
+        val logout : Button = view.findViewById(R.id.btnLogout)
+        logout.setOnClickListener{
+            val fragment = logoutAccount_Confirm()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.nav_container,fragment)?.commit()
+        }
+
+
         return view
     }
 }

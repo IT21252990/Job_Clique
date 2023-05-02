@@ -142,7 +142,7 @@
         tools:text="Richard " />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/btnLogout"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="@string/Approvebtn"
@@ -196,7 +196,7 @@
         app:layout_constraintVertical_bias="0.81" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btnMyWishlist"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="@string/Declinebtn"

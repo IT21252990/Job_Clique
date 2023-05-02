@@ -170,6 +170,8 @@
     <string name="jobEmail">Email</string>
     <string name="jobDescrip">Job Discription</string>
     <string name="jobImage" />
+    <string name="logoutConfirm">Are you sure ?</string>
+    <string name="logoutConfirmlogoutText">Log Out</string>
 
 
 </resources>
