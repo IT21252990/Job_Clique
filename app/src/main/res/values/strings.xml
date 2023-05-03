@@ -109,7 +109,7 @@
 
     <!--    jobseeker Profile-->
     <string name="jobseeker_profile_header">My Profile</string>
-    <string name="jobseeker_profile_head">Hello Kalinga !</string>
+    <string name="jobseeker_profile_head">Wellcome !</string>
     <string name="profileEdtNameTitle">My Name :</string>
     <string name="profileEdtMyName">Kalinga</string>
     <string name="profileMyEmailTitle">My Email :</string>
