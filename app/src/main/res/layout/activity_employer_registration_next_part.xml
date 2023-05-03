@@ -9,8 +9,9 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar8"
-        android:layout_width="0dp"
-        android:layout_height="600dp"
+        android:layout_width="411dp"
+        android:layout_height="736dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/round_userlogin_card"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -18,83 +19,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/eployerRegi_title"
-        android:textColor="@color/darkBlue"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="393dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:paddingLeft="10dp"
-        android:text="@string/emplyerNextSubTitle"
-        android:textColor="@color/Blue"
-        android:textSize="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/empRegiConfirmPW"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:hint="@string/pw_hint2"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/myPadding"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView85" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/empRegiNPartCName"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toEndOf="@+id/materialToolbar8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar8" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:paddingLeft="20dp"
-        android:text="@string/empRegiCNameSub"
-        android:textColor="@color/lightBlue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="360dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/round_login_bars"
-        android:ems="10"
-        android:hint="@string/Enter_Company_Name"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
     <TextView
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
         android:text="@string/empRegiphnnum"
         android:textColor="@color/white"
         android:textSize="20dp"
@@ -102,26 +66,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:paddingLeft="20dp"
-        android:text="@string/empregiaddphnsubhead"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+        app:layout_constraintTop_toBottomOf="@+id/empRegiEmail" />
 
     <EditText
-        android:id="@+id/editTextPhone3"
+        android:id="@+id/empRegiPhone"
         android:layout_width="360dp"
         android:layout_height="50dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/round_login_bars"
         android:ems="10"
@@ -129,37 +80,143 @@
         android:inputType="phone"
         android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:background="@color/Blue"
-        android:text="@string/cancelempcompanyAddbtn"
-        android:textColor="@color/lightBlue"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/empRegiCpmpanyName"
+        android:layout_width="360dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:hint="@string/Enter_Company_Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone3"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btnEmpRegister"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:background="@color/yellow"
         android:text="@string/empCompanyCreatebtn"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone3" />
+        app:layout_constraintTop_toBottomOf="@+id/empRegiConfirmPW" />
+
+    <TextView
+        android:id="@+id/textView85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/regiPw2"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empRegiPassword" />
+
+    <EditText
+        android:id="@+id/empRegiPassword"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:hint="@string/regiPw_hint"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/myPadding"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/signup_pw1"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empRegiPhone" />
+
+    <EditText
+        android:id="@+id/empRegiEmail"
+        android:layout_width="@dimen/RegistrationLayoutWidth"
+        android:layout_height="@dimen/RagistrationLayoutLength"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_login_bars"
+        android:ems="10"
+        android:hint="@string/loginEmail_hint"
+        android:inputType="textPersonName"
+        android:paddingLeft="@dimen/myPadding"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView86" />
+
+    <TextView
+        android:id="@+id/textView86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/signup_email"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toEndOf="@+id/materialToolbar8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/empRegiCpmpanyName" />
+
+    <TextView
+        android:id="@+id/btnGotoLogin2"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:background="@color/darkBlue"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/haveaccounLoginBtn"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEmpRegister" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="54dp"
+        android:text="@string/eployerRegi_title"
+        android:textColor="@color/darkBlue"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/materialToolbar8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

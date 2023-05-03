@@ -37,7 +37,7 @@
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="@string/userRegiName"
         android:textColor="@color/white"
         android:textSize="@dimen/registrationPageTiletxtSize"
@@ -82,6 +82,7 @@
         android:id="@+id/btnGotoLogin"
         android:layout_width="320dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="36dp"
         android:background="@color/darkBlue"
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/haveaccounLoginBtn"
@@ -89,10 +90,8 @@
         android:textColor="@color/yellow"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isEmployer"
-        app:layout_constraintVertical_bias="0.837" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
@@ -193,43 +192,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/regi_radio_head"
-        android:textColor="@color/white"
-        android:textSize="@dimen/registrationPageTiletxtSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerConfirmPassword" />
-
-    <CheckBox
-        android:id="@+id/isJobseeker"
-        android:layout_width="@dimen/RegistrationLayoutWidth"
-        android:layout_height="@dimen/RagistrationLayoutLength"
-        android:layout_marginTop="5dp"
-        android:text="@string/regiRadio1_text"
-        android:textColor="@color/white"
-        android:textSize="@dimen/registrationPageTiletxtSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <CheckBox
-        android:id="@+id/isEmployer"
-        android:layout_width="@dimen/RegistrationLayoutWidth"
-        android:layout_height="@dimen/RagistrationLayoutLength"
-        android:text="@string/regiRadio2_text"
-        android:textColor="@color/white"
-        android:textSize="@dimen/registrationPageTiletxtSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isJobseeker" />
-
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="150dp"
@@ -238,11 +200,10 @@
         android:text="@string/regiPage_btnJoinNow"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar6"
+        app:layout_constraintBottom_toTopOf="@+id/btnGotoLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/isEmployer"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toBottomOf="@+id/registerConfirmPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -55,7 +55,7 @@ class userLoginActivity : AppCompatActivity() {
 
 
         btngotoSignUp.setOnClickListener {
-            var intent = Intent(this, userRegistrationActivity::class.java)
+            var intent = Intent(this, MainActivityRegistration::class.java)
             startActivity(intent)
             finish()
         }
@@ -76,6 +76,17 @@ class userLoginActivity : AppCompatActivity() {
             if (documentSnapshot.getString("isUser") != null) {
                 //user is admin
                 startActivity(Intent(applicationContext, JobSeekerAvtivity::class.java))
+                finish()
+            }
+        }
+        val df2: DocumentReference = fStore.collection("Employers").document(uid)
+        // extract the data from the document
+        df2.get().addOnSuccessListener { documentSnapshot ->
+            Log.d("TAG", "onSuccess: " + documentSnapshot.data)
+            // identify the user access level
+            if (documentSnapshot.getString("isEmployer") != null) {
+                //user is admin
+                startActivity(Intent(applicationContext, MainActivityEmployer::class.java))
                 finish()
             }
         }

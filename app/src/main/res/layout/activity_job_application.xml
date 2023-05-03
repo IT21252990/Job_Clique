@@ -202,14 +202,14 @@
             android:text="@string/tv_application_addi"
             android:textColor="@color/lightBlue"
             android:textSize="@dimen/application_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintBottom_toTopOf="@+id/empRegiCpmpanyName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/empRegiCpmpanyName"
             android:layout_width="@dimen/typing_space_width"
             android:layout_height="@dimen/typing_space_height"
             android:background="@drawable/form_fill_space_background"
@@ -236,7 +236,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/empRegiCpmpanyName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
