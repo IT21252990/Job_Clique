@@ -53,7 +53,7 @@
             android:layout_height="@dimen/search_tv_height">
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/btngotoSignUp"
                 android:layout_width="63dp"
                 android:layout_height="match_parent"
                 android:background="@color/darkBlue"

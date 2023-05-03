@@ -20,12 +20,12 @@
         <activity
             android:name=".MainActivityEmployer"
             android:exported="false" />
-        <activity
-            android:name=".MainActivityEmployer"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivityAppliedJobs"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".MainActivityEmployer"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".MainActivityAppliedJobs"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".JobApplication"
             android:exported="false" />
@@ -36,12 +36,12 @@
         <activity
             android:name=".requestApproval"
             android:exported="false" />
-        <activity
-            android:name=".MainActivityEmployer"
-            android:exported="false" />
-        <activity
-            android:name=".JobSeekerProfile"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".MainActivityEmployer"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".JobSeekerProfile"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".EmployerRegistrationNextPart"
             android:exported="false" />
@@ -50,12 +50,6 @@
             android:exported="false" />
         <activity
             android:name=".userLoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".JobSeekerAvtivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,6 +57,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".JobSeekerAvtivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

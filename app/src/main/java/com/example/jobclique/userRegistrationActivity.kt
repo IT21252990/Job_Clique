@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
 import com.google.firebase.auth.AuthResult
@@ -21,7 +22,7 @@ class userRegistrationActivity : AppCompatActivity() {
     private lateinit var password: EditText
     private lateinit var confirmPassword: EditText
     private lateinit var registerBtn: Button
-//    private lateinit var goToLogin: Button
+    private lateinit var goToLogin: TextView
     private var valid = true
     private lateinit var fAuth: FirebaseAuth
     private lateinit var fStore: FirebaseFirestore
@@ -39,7 +40,7 @@ class userRegistrationActivity : AppCompatActivity() {
         password = findViewById(R.id.registerPassword)
         confirmPassword = findViewById(R.id.registerConfirmPassword)
         registerBtn = findViewById(R.id.registerBtn)
-//        goToLogin = findViewById(R.id.btnGotoLogin)
+        goToLogin = findViewById(R.id.btnGotoLogin)
 
         registerBtn.setOnClickListener {
             checkField(fullName)
@@ -69,6 +70,12 @@ class userRegistrationActivity : AppCompatActivity() {
                         Toast.makeText(this@userRegistrationActivity, "Failed to Create Account", Toast.LENGTH_SHORT).show()
                     }
             }
+        }
+
+        goToLogin.setOnClickListener {
+            var intent = Intent(this, userLoginActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
 
