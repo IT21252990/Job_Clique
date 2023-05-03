@@ -14,7 +14,7 @@
         android:layout_marginStart="172dp"
         android:layout_marginBottom="15dp"
         android:cropToPadding="true"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/loginPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/pngegg__1_" />
 
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/loginEmail"
         android:layout_width="@dimen/loginLayoutWidth"
         android:layout_height="@dimen/loginLayoutHeight"
         android:layout_marginTop="5dp"
@@ -97,10 +97,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/loginPassword"
         android:layout_width="@dimen/loginLayoutWidth"
         android:layout_height="@dimen/loginLayoutHeight"
         android:layout_marginTop="5dp"
@@ -127,7 +127,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/loginBtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -150,7 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.913"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
 
     <TextView
         android:id="@+id/btngotoSignUp"
@@ -162,7 +162,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
     <ImageView
         android:id="@+id/imageView12"

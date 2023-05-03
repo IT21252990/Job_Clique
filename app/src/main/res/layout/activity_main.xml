@@ -43,9 +43,8 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogouttest" />
 
     <Button
         android:id="@+id/btnjobSeekerMenu"
@@ -59,7 +58,6 @@
 
         app:layout_constraintBottom_toTopOf="@+id/btnJobApplication"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEmpRegiPart2" />
 
@@ -67,11 +65,11 @@
         android:id="@+id/btnJobApplication"
         android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_500"
+        android:background="@color/darkBlue"
         android:text="Apply for a job"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnEmployer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnjobSeekerMenu" />
 
@@ -102,8 +100,6 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView33" />
 
@@ -118,7 +114,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnEmpRegiPart2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
@@ -133,7 +128,6 @@
 
         app:layout_constraintBottom_toTopOf="@+id/btnjobSeekerMenu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
@@ -147,8 +141,19 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnAdminMenu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnJobApplication" />
+
+    <Button
+        android:id="@+id/btnLogouttest"
+        android:layout_width="411dp"
+        android:background="@color/darkBlue"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

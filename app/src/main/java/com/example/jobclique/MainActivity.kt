@@ -9,12 +9,24 @@ import android.view.View
 
 import androidx.fragment.app.Fragment
 import com.example.jobclique.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var logout: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        logout = findViewById(R.id.btnLogouttest)
+        logout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            var intent = Intent(this, userLoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         var btnJobApplication = findViewById<Button>(R.id.btnJobApplication)
         btnJobApplication.setOnClickListener {

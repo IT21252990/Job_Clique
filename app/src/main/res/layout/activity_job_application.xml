@@ -117,14 +117,14 @@
             android:text="@string/tv_application_name"
             android:textColor="@color/lightBlue"
             android:textSize="@dimen/application_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/loginEmail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/loginEmail"
             android:layout_width="@dimen/typing_space_width"
             android:layout_height="@dimen/typing_space_height"
             android:background="@drawable/form_fill_space_background"
@@ -150,7 +150,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.067"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
 
         <EditText
             android:id="@+id/editTextTextEmailAddress"
