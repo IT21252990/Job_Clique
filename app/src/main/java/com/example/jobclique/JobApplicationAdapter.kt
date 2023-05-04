@@ -21,7 +21,7 @@ class JobApplicationAdapter(private val jobApplicationList : ArrayList<JobApplic
         val jobApplicationData: JobApplicationData = jobApplicationList[position]
 //        holder.jobPostTitle.text =
 //        holder.jobPostEmployer.text =
-        holder.appliedDate.text = jobApplicationData.AppliedDate.toString()
+        holder.appliedDate.text = jobApplicationData.AppliedDate?.toDate().toString()
         holder.status.text = jobApplicationData.Status
 
     }
