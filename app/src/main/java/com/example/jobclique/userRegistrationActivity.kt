@@ -8,13 +8,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.NonNull
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.Objects
 
 class userRegistrationActivity : AppCompatActivity() {
     private lateinit var fullName: EditText
@@ -40,7 +38,7 @@ class userRegistrationActivity : AppCompatActivity() {
         password = findViewById(R.id.registerPassword)
         confirmPassword = findViewById(R.id.registerConfirmPassword)
         registerBtn = findViewById(R.id.registerBtn)
-        goToLogin = findViewById(R.id.btnGotoLogin)
+        goToLogin = findViewById(R.id.btnApplyJob)
 
         registerBtn.setOnClickListener {
             checkField(fullName)

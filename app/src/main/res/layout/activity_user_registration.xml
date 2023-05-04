@@ -79,7 +79,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/btnGotoLogin"
+        android:id="@+id/btnApplyJob"
         android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_marginBottom="36dp"
@@ -200,7 +200,7 @@
         android:text="@string/regiPage_btnJoinNow"
         android:textSize="16dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnGotoLogin"
+        app:layout_constraintBottom_toTopOf="@+id/btnApplyJob"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
