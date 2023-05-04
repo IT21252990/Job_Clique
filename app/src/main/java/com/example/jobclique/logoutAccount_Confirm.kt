@@ -18,7 +18,7 @@ class logoutAccount_Confirm : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_logout_account_confirm, container, false)
 
-        val logout: Button = view.findViewById(R.id.accountLogout)
+        val logout: Button = view.findViewById(R.id.btnAccountDelete)
         logout.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(requireContext(), userLoginActivity::class.java)
