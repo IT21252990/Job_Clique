@@ -7,70 +7,167 @@
     android:layout_height="match_parent"
     tools:context=".addPost">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/Blue"
-        app:layout_constraintBottom_toTopOf="@+id/txtInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="ADD NEW POST"
-        app:titleTextColor="@color/white" />
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:background="@color/darkBlue"
+    app:title="Post a Job "
+    app:subtitleTextColor="@color/white"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtInputLayout"
+        android:id="@+id/jobName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Job Name"
-        android:orientation="vertical"
-        app:helperText="required"
-        app:helperTextTextColor="@color/red"
-        app:layout_constraintBottom_toTopOf="@+id/addReq"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/jobName"
+        app:helperText="required"
+        app:hintTextColor="@color/lightBlue"
+       >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtInputEdit"
+            android:id="@+id/jobNameField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
+
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtEmailInputLayout"
+        android:id="@+id/jobDiscrip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:orientation="vertical"
-        app:helperText="required"
-        app:helperTextTextColor="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jobName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addReq">
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/jobDescrip"
+        app:helperText="required"
+        app:hintTextColor="@color/lightBlue"
+        >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtEmailEdit"
+            android:id="@+id/jobDescripField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/jobType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/jobDiscrip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Job Type"
+        app:helperText="required"
+        app:hintTextColor="@color/lightBlue"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/jobTypeField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/addedDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@id/jobType"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Added date"
+        app:helperText="required"
+        app:hintTextColor="@color/lightBlue"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addedDateField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/addedDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Contact Number"
+        app:helperText="required"
+        app:hintTextColor="@color/lightBlue"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/salaryRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="24dp"
+        android:hint="Salary range"
+        app:helperText="required"
+        app:hintTextColor="@color/lightBlue"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/salaryRangeField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    
     <Button
-        android:id="@+id/addReq"
-        android:layout_width="wrap_content"
+        android:id="@+id/addPostBtn"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginEnd="113dp"
-        android:text="@string/addPost"
-        app:layout_constraintBottom_toTopOf="@+id/txtEmailInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Next"
+        app:layout_constraintTop_toBottomOf="@+id/salaryRange"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputLayout" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="36dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

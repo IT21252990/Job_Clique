@@ -14,7 +14,7 @@ class addPost : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_add_post, container, false)
-        val addB : Button = view.findViewById(R.id.addReq)
+        val addB : Button = view.findViewById(R.id.addPostBtn)
 
         addB.setOnClickListener{
             val fragment = PostsJobs()
