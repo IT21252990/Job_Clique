@@ -64,7 +64,7 @@ class EmployerRegistrationNextPart : AppCompatActivity() {
                         userInfo["isEmployer"] = "1"
 
                         df.set(userInfo)
-                        startActivity(Intent(applicationContext, MainActivity::class.java))
+                        startActivity(Intent(applicationContext, MainActivityEmployer::class.java))
                         finish()
                     }
                     .addOnFailureListener { e: Exception ->
