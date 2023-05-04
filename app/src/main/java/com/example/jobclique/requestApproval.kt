@@ -15,11 +15,13 @@ class requestApproval : AppCompatActivity() {
         setContentView(R.layout.activity_request_approval)
 
 
-        var adminLogout = findViewById<Button>(R.id.adminLogout)
-        adminLogout.setOnClickListener {
-            var intent = Intent(this, logoutAccount_Confirm::class.java)
+        val logout: Button = findViewById(R.id.adminLogout)
+        logout.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(this, userLoginActivity::class.java)
             startActivity(intent)
             finish()
         }
+
     }
 }

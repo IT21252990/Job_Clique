@@ -106,10 +106,11 @@ class userLoginActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         if (FirebaseAuth.getInstance().currentUser != null) {
-            startActivity(Intent(applicationContext, MainActivity::class.java))
+            //startActivity(Intent(applicationContext, MainActivity::class.java))
+            checkUserAccessLevel(FirebaseAuth.getInstance().currentUser!!.uid)
             finish()
         }
-    }
 
+    }
 
 }
