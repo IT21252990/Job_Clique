@@ -172,6 +172,7 @@
     <string name="jobImage" />
     <string name="logoutConfirm">Are you sure ?</string>
     <string name="logoutConfirmlogoutText">Log Out</string>
+    <string name="resetPWtext">After send the your password request please check your email address to further process</string>
 
 
 </resources>

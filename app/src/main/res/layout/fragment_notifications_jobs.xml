@@ -72,14 +72,14 @@
         android:textColor="@color/darkBlue"
         android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar4"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintEnd_toStartOf="@+id/BtnRestPW"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar4"
         app:layout_constraintVertical_bias="0.905" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/BtnRestPW"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:text="@string/Declinebtn"

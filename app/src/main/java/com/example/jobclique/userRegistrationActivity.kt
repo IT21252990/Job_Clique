@@ -61,7 +61,7 @@ class userRegistrationActivity : AppCompatActivity() {
                         userInfo["isUser"] = "1"
 
                         df.set(userInfo)
-                        startActivity(Intent(this, JobSeekerAvtivity::class.java))
+                        startActivity(Intent(applicationContext, JobSeekerAvtivity::class.java))
                         finish()
                     }
                     .addOnFailureListener { e: Exception ->

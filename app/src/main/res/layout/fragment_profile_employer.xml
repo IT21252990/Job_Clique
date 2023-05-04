@@ -115,10 +115,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/employerEmail" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/employerCompanyName"
         android:layout_width="@dimen/profileLayoutWidth"
         android:layout_height="@dimen/emp_edtTxt_layout_Height"
         android:layout_marginTop="20dp"
@@ -126,7 +126,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingLeft="@dimen/myPadding"
-        android:text="@string/procomname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,10 +142,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintTop_toBottomOf="@+id/employerCompanyName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/employerEmail"
         android:layout_width="@dimen/profileLayoutWidth"
         android:layout_height="@dimen/emp_edtTxt_layout_Height"
         android:layout_marginTop="28dp"
@@ -154,14 +153,13 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingLeft="@dimen/myPadding"
-        android:text="@string/profileEditEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnEmployerProfileUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -175,7 +173,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+        app:layout_constraintTop_toBottomOf="@+id/employerPhone" />
 
     <Button
         android:id="@+id/btnResetPwemp"
@@ -232,7 +230,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnMyWishlist" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/employerPhone"
         android:layout_width="@dimen/profileLayoutWidth"
         android:layout_height="@dimen/emp_edtTxt_layout_Height"
         android:layout_marginTop="32dp"
@@ -240,7 +238,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingLeft="@dimen/myPadding"
-        android:text="@string/empProfilePhn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
