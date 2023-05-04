@@ -64,35 +64,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/jobType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/jobDiscrip"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="24dp"
-        android:hint="Job Type"
-        app:helperText="required"
-        app:hintTextColor="@color/lightBlue"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/jobTypeField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/addedDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="date"
-        app:layout_constraintTop_toBottomOf="@id/jobType"
+        app:layout_constraintTop_toBottomOf="@id/jobDiscrip"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
