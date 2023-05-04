@@ -20,6 +20,7 @@ class userLoginActivity : AppCompatActivity() {
     private lateinit var password: EditText
     private lateinit var loginBtn: Button
     private lateinit var btngotoSignUp: TextView
+    private lateinit var forgotPassword: TextView
     private var valid = true
     private lateinit var fAuth: FirebaseAuth
     private lateinit var fStore: FirebaseFirestore
@@ -35,6 +36,7 @@ class userLoginActivity : AppCompatActivity() {
         password = findViewById(R.id.loginPassword)
         loginBtn = findViewById(R.id.loginBtn)
         btngotoSignUp = findViewById(R.id.btngotoSignUp)
+        forgotPassword = findViewById(R.id.forgotPWlink)
 
         loginBtn.setOnClickListener {
             checkField(email)
@@ -59,6 +61,12 @@ class userLoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+//        forgotPassword.setOnClickListener {
+//            var intent = Intent(this, resetPassword::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
 
     }
 
