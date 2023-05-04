@@ -62,11 +62,11 @@ class userLoginActivity : AppCompatActivity() {
             finish()
         }
 
-//        forgotPassword.setOnClickListener {
-//            var intent = Intent(this, resetPassword::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
+        forgotPassword.setOnClickListener {
+            var intent = Intent(this, resetPassword::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 

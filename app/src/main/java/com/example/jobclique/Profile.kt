@@ -1,5 +1,6 @@
 package com.example.jobclique
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -57,10 +58,11 @@ class Profile : Fragment() {
 
         val resetButton : Button = view.findViewById(R.id.btnResetPwemp)
         resetButton.setOnClickListener{
-            val fragment = resetPassword()
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.nav_container,fragment)?.commit()
+            val intent = Intent(requireContext(), resetPassword::class.java)
+            startActivity(intent)
+            requireActivity().finish()
         }
+
         val dltAccount : Button = view.findViewById(R.id.deleteMyAccount)
         dltAccount.setOnClickListener{
             val fragment = deleteAccount_Confirm()

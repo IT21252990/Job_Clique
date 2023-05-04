@@ -1,5 +1,6 @@
 package com.example.jobclique
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -57,15 +58,14 @@ class ProfileEmployer : Fragment() {
             }
         }
 
-
-
-
         val resetButton : Button = view.findViewById(R.id.btnResetPwemp)
         resetButton.setOnClickListener{
-            val fragment = resetPassword()
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
+            val intent = Intent(requireContext(), resetPassword::class.java)
+            startActivity(intent)
+            requireActivity().finish()
         }
+
+
         val dltAccountemp : Button = view.findViewById(R.id.deleteMyAccountemp)
         dltAccountemp.setOnClickListener{
             val fragment = deleteAccount_Confirm()
