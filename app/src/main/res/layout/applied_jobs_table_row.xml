@@ -52,7 +52,7 @@
             android:textColor="@color/DaaaarkBlue" />
 
         <ImageButton
-            android:id="@+id/btdaApplicationDelete"
+            android:id="@+id/btnApplicationDelete"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/LightBlue3"

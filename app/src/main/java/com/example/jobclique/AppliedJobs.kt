@@ -30,12 +30,22 @@ class AppliedJobs : Fragment() {
         recyclerView.setHasFixedSize(true)
 
         jobApplicationArrayList = arrayListOf()
-
         jobApplicationAdapter = JobApplicationAdapter(jobApplicationArrayList)
-
         recyclerView.adapter = jobApplicationAdapter
 
+//delete
+        jobApplicationAdapter.setOnItemClickListener(object : JobApplicationAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                jobApplicationArrayList.removeAt(position)
+                jobApplicationAdapter.notifyItemRemoved(position)
+            }
+        })
+//delete
+
+
         EventChangeListner()
+
+
 
         return view
     }
