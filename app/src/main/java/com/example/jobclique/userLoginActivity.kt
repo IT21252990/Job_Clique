@@ -1,18 +1,19 @@
 package com.example.jobclique
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.regex.Pattern
 
 class userLoginActivity : AppCompatActivity() {
 
@@ -41,6 +42,28 @@ class userLoginActivity : AppCompatActivity() {
         loginBtn.setOnClickListener {
             checkField(email)
             checkField(password)
+
+            val checkEmail = email.text.toString().trim()
+            val checkPassword = password.text.toString().trim()
+
+            if(checkEmail.isEmpty()){
+                email.error = ("Email Required !")
+                email.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(checkPassword.isEmpty()){
+                password.error = ("Password Required !")
+                password.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(!Patterns.EMAIL_ADDRESS.matcher(checkEmail).matches()){
+                email.error = ("Please Enter valid Email !")
+                email.requestFocus()
+                return@setOnClickListener
+            }
+
 
             if (valid) {
                 // Start the user login process

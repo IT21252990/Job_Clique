@@ -12,11 +12,13 @@ import com.google.firebase.firestore.*
 
 class AppliedJobs : Fragment() {
 
-    private lateinit var fStore: FirebaseFirestore
+    private val db = FirebaseFirestore.getInstance()
+    private val jobApplicationCollection = db.collection("JobApplications")
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var jobApplicationArrayList : ArrayList<JobApplicationData>
-    private lateinit var jobApplicationAdapter: JobApplicationAdapter
+
+    private lateinit var adapter : JobApplicationAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,57 +27,49 @@ class AppliedJobs : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_applied_jobs, container, false)
 
+        //setContentView(R.layout.recyclerview_layout)
+
         recyclerView = view.findViewById(R.id.RecyclerAppliedJobsTable)
+
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.setHasFixedSize(true)
 
-        jobApplicationArrayList = arrayListOf()
-        jobApplicationAdapter = JobApplicationAdapter(jobApplicationArrayList)
-        recyclerView.adapter = jobApplicationAdapter
+        //fetchData()
+        jobApplicationCollection.get()
+            .addOnSuccessListener { querySnapshot ->
+                val dataList = arrayListOf<JobApplicationData>()
+                for (document in querySnapshot.documents) {
+                    // Convert Firestore documents to instances of MyData
+                    val myData = JobApplicationData(  document.getString("id") ?:"", document.getString("Status") ?: "")
+                    dataList.add(myData)
+                }
+                // Notify the RecyclerView adapter that the data has changed
+                adapter = JobApplicationAdapter(dataList)
+                //adapter.setOnItemDeleteListener()
+                recyclerView.adapter = adapter
 
-//delete
-//        jobApplicationAdapter.setOnItemClickListener(object : JobApplicationAdapter.OnItemClickListener {
-//            override fun onItemClick(position: Int) {
-//                jobApplicationArrayList.removeAt(position)
-//                jobApplicationAdapter.notifyItemRemoved(position)
-//            }
-//        })
-//delete
+                adapter.notifyDataSetChanged()
 
-
-        EventChangeListner()
-
+            }
+            .addOnFailureListener { exception ->
+                Log.w("TAG", "Error getting documents.", exception)
+            }
 
 
         return view
     }
 
-    private fun EventChangeListner() {
-        fStore = FirebaseFirestore.getInstance()
-        fStore.collection("JobApplications").orderBy("AppliedDate", Query.Direction.ASCENDING).
-        addSnapshotListener(object : EventListener<QuerySnapshot> {
-            override fun onEvent(
-                value: QuerySnapshot?,
-                error: FirebaseFirestoreException?
-            ) {
-                if( error != null ){
-                    Log.e("FireStore Error" , error.message.toString())
-                    return
-                }
-
-                for ( dc : DocumentChange in value?.documentChanges!!){
-                    if(dc.type == DocumentChange.Type.ADDED){
-                        jobApplicationArrayList.add(dc.document.toObject(JobApplicationData::class.java))
-                        val documentId: String = dc.document.id
-
-                    }
-                }
-
-                jobApplicationAdapter.notifyDataSetChanged()
-            }
-
-        })
-    }
+//    fun fetchData(): List<JobApplicationData> {
+//        val items = mutableListOf<JobApplicationData>()
+//        val query = jobApplicationCollection.get()
+//        val results = query.await()
+//        for (doc in results) {
+//            val appliedDate = doc.getDateTime("AppliedDate")?.toInstant()?.atZone(ZoneId.systemDefault())?.toLocalDateTime() ?: LocalDateTime.now()
+//            val status = doc.getString("Status") ?: ""
+//            val jobApplication = JobApplicationData(appliedDate, status)
+//            items.add(jobApplication)
+//        }
+//        return items
+//    }
 
 
 }
