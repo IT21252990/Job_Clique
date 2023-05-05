@@ -3,10 +3,13 @@ package com.example.jobclique
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerView.Adapter<LatestJobsAdapter.MyViewHolder>() {
+
+    var onItemClick : ((JobPosts) -> Unit )? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestJobsAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.latest_jobs_item ,
@@ -22,6 +25,10 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
 //        holder.employerID.text = jobPosts.EmployerID.toString()
         holder.salary.text = jobPosts.SalaryRange
 
+        holder.applybtn.setOnClickListener(){
+            onItemClick?.invoke(jobPosts)
+        }
+
     }
 
     override fun getItemCount(): Int {
@@ -33,6 +40,7 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
         val jobTitle : TextView = itemView.findViewById(R.id.title)
 //        val employerID : TextView = itemView.findViewById(R.id.EmployerName)
         val salary : TextView = itemView.findViewById(R.id.Salary)
+        val applybtn : Button = itemView.findViewById(R.id.btnApplyJob)
 
     }
 }

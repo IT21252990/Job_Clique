@@ -36,23 +36,21 @@ class Home : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-//
-//        val applyJob : Button = view.findViewById(R.id.btnApplyJob)
-//        applyJob.setOnClickListener{
-//            val intent = Intent(requireContext(), JobApplication::class.java)
-//            startActivity(intent)
-//            requireActivity().finish()
-//        }
+
 
     recyclerView = view.findViewById(R.id.RecyclerLatestJobs)
     recyclerView.layoutManager = LinearLayoutManager(context)
     recyclerView.setHasFixedSize(true)
 
     jobPostsArrayList = arrayListOf()
-
     latestJobsAdapter = LatestJobsAdapter(jobPostsArrayList)
-
     recyclerView.adapter = latestJobsAdapter
+
+    latestJobsAdapter.onItemClick={
+        val intent = Intent(requireContext(), JobApplication::class.java)
+        startActivity(intent)
+        requireActivity().finish()
+    }
 
     EventChangeListner()
 

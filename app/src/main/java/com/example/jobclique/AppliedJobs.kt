@@ -58,18 +58,7 @@ class AppliedJobs : Fragment() {
         return view
     }
 
-//    fun fetchData(): List<JobApplicationData> {
-//        val items = mutableListOf<JobApplicationData>()
-//        val query = jobApplicationCollection.get()
-//        val results = query.await()
-//        for (doc in results) {
-//            val appliedDate = doc.getDateTime("AppliedDate")?.toInstant()?.atZone(ZoneId.systemDefault())?.toLocalDateTime() ?: LocalDateTime.now()
-//            val status = doc.getString("Status") ?: ""
-//            val jobApplication = JobApplicationData(appliedDate, status)
-//            items.add(jobApplication)
-//        }
-//        return items
-//    }
+
 
 
 }
