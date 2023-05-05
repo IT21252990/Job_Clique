@@ -117,14 +117,14 @@
             android:text="@string/tv_application_name"
             android:textColor="@color/lightBlue"
             android:textSize="@dimen/application_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/loginEmail"
+            app:layout_constraintBottom_toTopOf="@+id/edtTextName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/loginEmail"
+            android:id="@+id/edtTextName"
             android:layout_width="@dimen/typing_space_width"
             android:layout_height="@dimen/typing_space_height"
             android:background="@drawable/form_fill_space_background"
@@ -146,14 +146,14 @@
             android:text="@string/tv_application_email"
             android:textColor="@color/lightBlue"
             android:textSize="@dimen/application_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.067"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginEmail" />
+            app:layout_constraintTop_toBottomOf="@+id/edtTextName" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/editTextEmail"
             android:layout_width="@dimen/typing_space_width"
             android:layout_height="@dimen/typing_space_height"
             android:background="@drawable/form_fill_space_background"
@@ -192,7 +192,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.086"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
 
         <TextView
             android:id="@+id/textView14"
@@ -202,14 +202,14 @@
             android:text="@string/tv_application_addi"
             android:textColor="@color/lightBlue"
             android:textSize="@dimen/application_text_size"
-            app:layout_constraintBottom_toTopOf="@+id/empRegiCpmpanyName"
+            app:layout_constraintBottom_toTopOf="@+id/edtTextOptional"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <EditText
-            android:id="@+id/empRegiCpmpanyName"
+            android:id="@+id/edtTextOptional"
             android:layout_width="@dimen/typing_space_width"
             android:layout_height="@dimen/typing_space_height"
             android:background="@drawable/form_fill_space_background"
@@ -236,7 +236,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/empRegiCpmpanyName" />
+            app:layout_constraintTop_toBottomOf="@+id/edtTextOptional" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
