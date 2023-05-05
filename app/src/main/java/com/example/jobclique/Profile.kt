@@ -18,6 +18,10 @@ class Profile : Fragment() {
     private lateinit var email : EditText
     private lateinit var btnUpdateJobSeekerProfile : Button
 
+    private var fauth = FirebaseAuth.getInstance()
+
+    private var currentUser = fauth.currentUser
+
     private var db = FirebaseFirestore.getInstance()
     private lateinit var userID: String
 
@@ -48,11 +52,17 @@ class Profile : Fragment() {
                 "UserEmail" to updatedEmail
             )
 
-            db.collection("Users").document(userID).update(mapUpdate).addOnSuccessListener {
-                Toast.makeText(context, "Successfully Updated", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener{
+            currentUser?.updateEmail(updatedEmail)?.addOnSuccessListener {
+                db.collection("Users").document(userID).update(mapUpdate)
+                    .addOnSuccessListener {
+                        Toast.makeText(context, "Successfully Updated", Toast.LENGTH_SHORT).show()
+                    }.addOnFailureListener{
+                        Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
+                    }
+            }?.addOnFailureListener{
                 Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
             }
+
         }
 
 

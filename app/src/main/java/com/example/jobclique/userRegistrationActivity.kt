@@ -2,17 +2,19 @@ package com.example.jobclique
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.regex.Pattern
 
 class userRegistrationActivity : AppCompatActivity() {
     private lateinit var fullName: EditText
@@ -45,6 +47,55 @@ class userRegistrationActivity : AppCompatActivity() {
             checkField(email)
             checkField(password)
             checkField(confirmPassword)
+
+            val checkFullName = fullName.text.toString().trim()
+            val checkEmail = email.text.toString().trim()
+            val checkPassword = password.text.toString().trim()
+            val checkConfirmPassword = confirmPassword.text.toString().trim()
+
+            if (checkFullName.isEmpty()) {
+                fullName.error = ("Name Required !")
+                fullName.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkEmail.isEmpty()) {
+                email.error = ("Email Required !")
+                email.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(!Patterns.EMAIL_ADDRESS.matcher(checkEmail).matches()){
+                email.error = ("Please Enter valid Email !")
+                email.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkPassword.isEmpty()) {
+                password.error = ("Password Required !")
+                password.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkConfirmPassword.isEmpty()) {
+                confirmPassword.error = ("Confirm Password Required !")
+                confirmPassword.requestFocus()
+                return@setOnClickListener
+            }
+
+            val pattern: Pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")
+
+            if(!pattern.matcher(checkPassword).matches()){
+                password.error = ("Password not Valid !")
+                password.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(checkConfirmPassword != checkPassword){
+                confirmPassword.error = ("Confirm Password mismatched !")
+                confirmPassword.requestFocus()
+                return@setOnClickListener
+            }
 
             if (valid) {
                 // Start the user registration process

@@ -3,6 +3,7 @@ package com.example.jobclique
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -12,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.regex.Pattern
 
 class EmployerRegistrationNextPart : AppCompatActivity() {
     private lateinit var companyName: EditText
@@ -47,6 +49,68 @@ class EmployerRegistrationNextPart : AppCompatActivity() {
             checkField(phone)
             checkField(password)
             checkField(confirmPassword)
+
+            val checkCompanyName = companyName.text.toString().trim()
+            val checkEmail = email.text.toString().trim()
+            val checkPhone = phone.text.toString().trim()
+            val checkPassword = password.text.toString().trim()
+            val checkConfirmPassword = confirmPassword.text.toString().trim()
+
+            if (checkCompanyName.isEmpty()) {
+                companyName.error = ("companyName Required !")
+                companyName.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkEmail.isEmpty()) {
+                email.error = ("Email Required !")
+                email.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(!Patterns.EMAIL_ADDRESS.matcher(checkEmail).matches()){
+                email.error = ("Please Enter valid Email !")
+                email.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkPhone.isEmpty()) {
+                phone.error = ("Phone Number Required !")
+                phone.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(checkPhone.length != 10){
+                phone.error = ("Phone Number Should Have 10 digits !")
+                phone.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkPassword.isEmpty()) {
+                password.error = ("Password Required !")
+                password.requestFocus()
+                return@setOnClickListener
+            }
+
+            if (checkConfirmPassword.isEmpty()) {
+                confirmPassword.error = ("Confirm Password Required !")
+                confirmPassword.requestFocus()
+                return@setOnClickListener
+            }
+
+            val pattern: Pattern = Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$")
+
+            if(!pattern.matcher(checkPassword).matches()){
+                password.error = ("Password not Valid !")
+                password.requestFocus()
+                return@setOnClickListener
+            }
+
+            if(checkConfirmPassword != checkPassword){
+                confirmPassword.error = ("Confirm Password mismatched !")
+                confirmPassword.requestFocus()
+                return@setOnClickListener
+            }
 
             if (valid) {
                 // Start the user registration process

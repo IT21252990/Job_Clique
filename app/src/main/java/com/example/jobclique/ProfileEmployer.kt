@@ -19,6 +19,10 @@ class ProfileEmployer : Fragment() {
     private lateinit var phone : EditText
     private lateinit var btnUpdateEmployerProfile : Button
 
+    private var fauth = FirebaseAuth.getInstance()
+
+    private var currentUser = fauth.currentUser
+
     private var db = FirebaseFirestore.getInstance()
     private lateinit var userID: String
 
@@ -51,9 +55,13 @@ class ProfileEmployer : Fragment() {
                 "UserPhone" to updatedPhone
             )
 
-            db.collection("Employers").document(userID).update(mapUpdate).addOnSuccessListener {
-                Toast.makeText(context, "Successfully Updated", Toast.LENGTH_SHORT).show()
-            }.addOnFailureListener{
+            currentUser?.updateEmail(updatedEmail)?.addOnSuccessListener {
+                db.collection("Employers").document(userID).update(mapUpdate).addOnSuccessListener {
+                    Toast.makeText(context, "Successfully Updated", Toast.LENGTH_SHORT).show()
+                }.addOnFailureListener{
+                    Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
+                }
+            }?.addOnFailureListener{
                 Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
             }
         }
