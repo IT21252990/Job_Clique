@@ -34,12 +34,12 @@ class AppliedJobs : Fragment() {
         recyclerView.adapter = jobApplicationAdapter
 
 //delete
-        jobApplicationAdapter.setOnItemClickListener(object : JobApplicationAdapter.OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                jobApplicationArrayList.removeAt(position)
-                jobApplicationAdapter.notifyItemRemoved(position)
-            }
-        })
+//        jobApplicationAdapter.setOnItemClickListener(object : JobApplicationAdapter.OnItemClickListener {
+//            override fun onItemClick(position: Int) {
+//                jobApplicationArrayList.removeAt(position)
+//                jobApplicationAdapter.notifyItemRemoved(position)
+//            }
+//        })
 //delete
 
 
@@ -66,6 +66,8 @@ class AppliedJobs : Fragment() {
                 for ( dc : DocumentChange in value?.documentChanges!!){
                     if(dc.type == DocumentChange.Type.ADDED){
                         jobApplicationArrayList.add(dc.document.toObject(JobApplicationData::class.java))
+                        val documentId: String = dc.document.id
+
                     }
                 }
 
