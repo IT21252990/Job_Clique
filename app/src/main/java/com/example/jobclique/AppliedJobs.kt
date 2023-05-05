@@ -8,12 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 
 class AppliedJobs : Fragment() {
 
+    var userID = FirebaseAuth.getInstance().currentUser!!.uid
+
     private val db = FirebaseFirestore.getInstance()
-    private val jobApplicationCollection = db.collection("JobApplications")
+    private val jobApplicationCollection = db.collection("JobApplications").whereEqualTo("userID" , userID)
 
     private lateinit var recyclerView: RecyclerView
 
