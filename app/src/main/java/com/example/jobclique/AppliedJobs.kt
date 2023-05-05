@@ -41,8 +41,11 @@ class AppliedJobs : Fragment() {
                     // Convert Firestore documents to instances of MyData
                     val myData = JobApplicationData(
                         document.getString("id") ?:"",
-                        document.getString("Status") ?: "",
-                        document.getString("documentID")?:""
+                        document.getString("name") ?: "",
+                        document.getString("email")?:"",
+                        document.getString("phoneNo")?:"",
+                        document.getString("email")?:"",
+                        document.getString("status")?:""
                     )
                     dataList.add(myData)
                 }

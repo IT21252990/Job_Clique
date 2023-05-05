@@ -1,8 +1,14 @@
 package com.example.jobclique
 
+import com.google.firebase.firestore.FieldValue
+
 class JobApplicationData(
     var Id: String,
-    //var AppliedDate: Any? = null,
-    var Status: String? = null,
-    val documentID: String
+    var name: String? = null,
+    var email: String? = null,
+    var phoneNo: String? = null,
+    var optional: String? = null,
+    var status: String? = null,
+    var appliedDate: FieldValue?= null,
+    var userID: String? = null,
 )

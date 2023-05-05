@@ -39,7 +39,9 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val JobApplicationData = jobApplicationList[position]
+        val finalPosition = position
+
+        val JobApplicationData = jobApplicationList[finalPosition]
         //holder.appliedDate.text = JobApplicationData.AppliedDate.toString()
    //     holder.status.text = JobApplicationData.Status
 
@@ -47,15 +49,17 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
 //            onItemDeleteListener?.onItemDelete(position)
 //        }
 
-        holder.status.text = JobApplicationData.Status
+        holder.status.text = JobApplicationData.status
 
         holder.deletebtn.setOnClickListener {
             val builder = AlertDialog.Builder(holder.status.context)
             builder.setTitle("Are you Sure ?")
             builder.setMessage("Deleted data can't be Undo")
             builder.setPositiveButton("Delete") { dialog, which ->
-                FirebaseFirestore.getInstance().collection("JobApplications")
-                    .document(jobApplicationList[position].documentID).delete()
+                FirebaseFirestore.getInstance().collection("JobApplications").get()
+                    .onSuccessTask(){
+                        FirebaseFirestore.getInstance().collection("JobApplications").document("UserID").delete()
+                    }
             }
             builder.setNegativeButton("Cancel") { dialog, which ->
                 Toast.makeText(holder.status.context, "Cancelled", Toast.LENGTH_SHORT).show()
