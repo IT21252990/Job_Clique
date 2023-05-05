@@ -39,7 +39,11 @@ class AppliedJobs : Fragment() {
                 val dataList = arrayListOf<JobApplicationData>()
                 for (document in querySnapshot.documents) {
                     // Convert Firestore documents to instances of MyData
-                    val myData = JobApplicationData(  document.getString("id") ?:"", document.getString("Status") ?: "")
+                    val myData = JobApplicationData(
+                        document.getString("id") ?:"",
+                        document.getString("Status") ?: "",
+                        document.getString("documentID")?:""
+                    )
                     dataList.add(myData)
                 }
                 // Notify the RecyclerView adapter that the data has changed

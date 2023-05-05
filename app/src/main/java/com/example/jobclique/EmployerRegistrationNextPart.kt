@@ -50,6 +50,7 @@ class EmployerRegistrationNextPart : AppCompatActivity() {
             checkField(password)
             checkField(confirmPassword)
 
+            // validate fields
             val checkCompanyName = companyName.text.toString().trim()
             val checkEmail = email.text.toString().trim()
             val checkPhone = phone.text.toString().trim()

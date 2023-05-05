@@ -1,5 +1,7 @@
 package com.example.jobclique
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -38,12 +41,27 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val JobApplicationData = jobApplicationList[position]
         //holder.appliedDate.text = JobApplicationData.AppliedDate.toString()
+   //     holder.status.text = JobApplicationData.Status
+
+//        holder.deletebtn.setOnClickListener {
+//            onItemDeleteListener?.onItemDelete(position)
+//        }
+
         holder.status.text = JobApplicationData.Status
 
         holder.deletebtn.setOnClickListener {
-            onItemDeleteListener?.onItemDelete(position)
+            val builder = AlertDialog.Builder(holder.status.context)
+            builder.setTitle("Are you Sure ?")
+            builder.setMessage("Deleted data can't be Undo")
+            builder.setPositiveButton("Delete") { dialog, which ->
+                FirebaseFirestore.getInstance().collection("JobApplications")
+                    .document(jobApplicationList[position].documentID).delete()
+            }
+            builder.setNegativeButton("Cancel") { dialog, which ->
+                Toast.makeText(holder.status.context, "Cancelled", Toast.LENGTH_SHORT).show()
+            }
+            builder.show()
         }
-
 
     }
 

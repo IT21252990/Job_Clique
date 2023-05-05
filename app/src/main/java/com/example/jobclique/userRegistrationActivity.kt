@@ -48,6 +48,7 @@ class userRegistrationActivity : AppCompatActivity() {
             checkField(password)
             checkField(confirmPassword)
 
+            // validate fields
             val checkFullName = fullName.text.toString().trim()
             val checkEmail = email.text.toString().trim()
             val checkPassword = password.text.toString().trim()

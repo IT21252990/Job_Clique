@@ -43,6 +43,7 @@ class userLoginActivity : AppCompatActivity() {
             checkField(email)
             checkField(password)
 
+            //validate fields
             val checkEmail = email.text.toString().trim()
             val checkPassword = password.text.toString().trim()
 
