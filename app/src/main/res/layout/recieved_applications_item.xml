@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView300"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:background="@drawable/searchview_background"
+    android:padding="5dp"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="10dp">
+
+    <ImageView
+        android:id="@+id/imageView301"
+        android:layout_width="97dp"
+        android:layout_height="113dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/form_fill_space_background"
+        android:src="@drawable/file"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvApplicationEmail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvApplicationName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Viduni Herath"
+        android:textColor="@color/lightBlue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvApplicationEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView301"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvApplicationEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="viduniherath@gmail.com"
+        android:textColor="@color/lightBlue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvApplicationStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView301"
+        app:layout_constraintTop_toBottomOf="@+id/tvApplicationName" />
+
+    <TextView
+        android:id="@+id/tvApplicationStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pending"
+        android:textColor="@color/purple_500"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView301"
+        app:layout_constraintTop_toBottomOf="@+id/tvApplicationEmail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

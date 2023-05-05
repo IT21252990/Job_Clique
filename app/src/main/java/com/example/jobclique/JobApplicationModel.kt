@@ -10,6 +10,7 @@ class JobApplicationModel(
     var Status: String? = null,
     var AppliedDate: FieldValue ?= null,
     var UserID: String? = null,
+
 //    var JobPostID: String? = null,
 
 
