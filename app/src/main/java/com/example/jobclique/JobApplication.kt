@@ -82,10 +82,21 @@ class JobApplication : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val application = JobApplicationModel(name, email, phone,optional,status,appliedDate,userID)
+//            val application = JobApplicationModel(name, email, phone,optional,status,appliedDate,userID)
+
+            val mapUpdate = mapOf(
+                "name" to name,
+                "email" to email,
+                "phoneNo" to phone,
+                "optinal" to optional,
+                "status" to status,
+                "appliedDate" to appliedDate,
+                "userID" to userID,
+
+            )
 
             if (valid) {
-                dbRef.add(application)
+                dbRef.add(mapUpdate)
                     .addOnSuccessListener { documentReference ->
                         Toast.makeText(this, "Application sent successfully!", Toast.LENGTH_LONG).show()
 

@@ -24,6 +24,7 @@ class EmployerJobApplications : Fragment() {
 
     private lateinit var adapter : EmployerJobApplicationsAdapter
 
+    private lateinit var documentId :String
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreateView(
@@ -49,6 +50,8 @@ class EmployerJobApplications : Fragment() {
                 val dataList = arrayListOf<JobApplicationModel>()
                 for (document in querySnapshot.documents) {
 
+                    documentId = document.id
+
                     // Convert Firestore documents to instances of MyData
                     val myData = JobApplicationModel(
 //                        document.getString("ApplicationID") ?: "",
@@ -57,7 +60,11 @@ class EmployerJobApplications : Fragment() {
                         document.getString("phoneNo")?:"",
                         document.getString("optional")?:"",
                         document.getString("status")?:"",
-//                        document.get("AppliedDate")?:"".as FieldValue?
+                        document.getString("id")?:"",
+                        //document.get("AppliedDate")?:""?.as FieldValue?,
+                        //document.getString("UserID")?:"",
+
+
                     )
                     dataList.add(myData)
                 }
@@ -80,6 +87,7 @@ class EmployerJobApplications : Fragment() {
                             putString("phoneNo", dataList[position].PhoneNo)
                             putString("optional", dataList[position].Optional)
                             putString("status", dataList[position].Status)
+                            putString("id", documentId )
                         }
                         fragment.arguments = bundle
 
