@@ -58,7 +58,7 @@ class Home : Fragment() {
 
     private fun EventChangeListner() {
         fStore = FirebaseFirestore.getInstance()
-        fStore.collection("JobPosts").orderBy("AddedDate", Query.Direction.ASCENDING).
+        fStore.collection("JobPosts").orderBy("jobDate", Query.Direction.ASCENDING).
                 addSnapshotListener(object : EventListener<QuerySnapshot>{
                     override fun onEvent(
                         value: QuerySnapshot?,

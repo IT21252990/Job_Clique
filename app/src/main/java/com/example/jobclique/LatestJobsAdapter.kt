@@ -21,9 +21,9 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
     override fun onBindViewHolder(holder: LatestJobsAdapter.MyViewHolder, position: Int) {
 
         val jobPosts : JobPosts = jobsList[position]
-        holder.jobTitle.text = jobPosts.Title
+        holder.jobTitle.text = jobPosts.jobName
 //        holder.employerID.text = jobPosts.EmployerID.toString()
-        holder.salary.text = jobPosts.SalaryRange
+        holder.salary.text = jobPosts.jobSalary
 
         holder.applybtn.setOnClickListener(){
             onItemClick?.invoke(jobPosts)
