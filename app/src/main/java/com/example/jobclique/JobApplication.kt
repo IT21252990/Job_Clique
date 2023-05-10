@@ -92,9 +92,7 @@ class JobApplication : AppCompatActivity() {
                 "status" to status,
                 "appliedDate" to appliedDate,
                 "userID" to userID,
-
             )
-
             if (valid) {
                 dbRef.add(mapUpdate)
                     .addOnSuccessListener { documentReference ->

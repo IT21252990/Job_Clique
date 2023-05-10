@@ -18,11 +18,9 @@ import com.google.firebase.ktx.Firebase
 class deleteAccount_Confirm : Fragment() {
 
     private lateinit var btnDeleteAccount : Button
-
     // connect with fire store database
     private lateinit var fAuth: FirebaseAuth
     private lateinit var fStore: FirebaseFirestore
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +28,6 @@ class deleteAccount_Confirm : Fragment() {
         var view = inflater.inflate(R.layout.fragment_delete_account__confirm, container, false)
 
         btnDeleteAccount = view.findViewById(R.id.btnAccountDelete)
-
         fAuth = FirebaseAuth.getInstance()
         fStore = FirebaseFirestore.getInstance()
 

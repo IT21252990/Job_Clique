@@ -50,12 +50,8 @@ class Home : Fragment() {
         startActivity(intent)
         requireActivity().finish()
     }
-
     EventChangeListner()
-
-
     return view }
-
     private fun EventChangeListner() {
         fStore = FirebaseFirestore.getInstance()
         fStore.collection("JobPosts").orderBy("jobDate", Query.Direction.ASCENDING).
@@ -68,13 +64,11 @@ class Home : Fragment() {
                             Log.e("FireStore Error" , error.message.toString())
                             return
                         }
-
                         for ( dc : DocumentChange in value?.documentChanges!!){
                             if(dc.type == DocumentChange.Type.ADDED){
                                 jobPostsArrayList.add(dc.document.toObject(JobPosts::class.java))
                             }
                         }
-
                         latestJobsAdapter.notifyDataSetChanged()
                     }
 

@@ -68,7 +68,6 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
         }
 
     }
-
     override fun getItemCount() = jobApplicationList.size
 
     override fun onItemDelete(position: Int) {

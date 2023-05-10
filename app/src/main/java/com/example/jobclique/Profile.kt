@@ -19,23 +19,18 @@ class Profile : Fragment() {
     private lateinit var btnUpdateJobSeekerProfile : Button
 
     private var fauth = FirebaseAuth.getInstance()
-
     private var currentUser = fauth.currentUser
-
     private var db = FirebaseFirestore.getInstance()
     private lateinit var userID: String
-
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
         userID = FirebaseAuth.getInstance().currentUser!!.uid
-
         fullName = view.findViewById(R.id.jobSeekerFullName)
         email = view.findViewById(R.id.employerEmail)
         btnUpdateJobSeekerProfile = view.findViewById(R.id.btnEmployerProfileUpdate)
@@ -46,12 +41,10 @@ class Profile : Fragment() {
 
             val updatedFullName = fullName.text.toString().trim()
             val updatedEmail = email.text.toString().trim()
-
             val mapUpdate = mapOf(
                 "FullName" to updatedFullName,
                 "UserEmail" to updatedEmail
             )
-
             currentUser?.updateEmail(updatedEmail)?.addOnSuccessListener {
                 db.collection("Users").document(userID).update(mapUpdate)
                     .addOnSuccessListener {
@@ -62,10 +55,7 @@ class Profile : Fragment() {
             }?.addOnFailureListener{
                 Toast.makeText(context, it.toString(), Toast.LENGTH_SHORT).show()
             }
-
         }
-
-
         val resetButton : Button = view.findViewById(R.id.btnResetPwemp)
         resetButton.setOnClickListener{
             val intent = Intent(requireContext(), resetPassword::class.java)
@@ -100,11 +90,8 @@ class Profile : Fragment() {
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.nav_container,fragment)?.commit()
         }
-
-
         return view
     }
-
     private fun setFireStoreData(){
         val ref = db.collection("Users").document(userID)
         ref.get().addOnSuccessListener {
