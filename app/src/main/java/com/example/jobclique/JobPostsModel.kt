@@ -15,7 +15,12 @@ data class JobPostsModel(
 //    val timestamp: Long,
 //    var id:String? = null,
 
-    var EmployerID:EmployerRegistrationNextPart? =null
+    var EmployerID:String? = null
 )
+
+{
+    // Empty constructor required for Firestore deserialization
+    constructor() : this(null, null, null, null, null, null )
+}
 
 

@@ -28,6 +28,8 @@ class addPost : Fragment() {
     private lateinit var jobCNumber: TextInputEditText
     private lateinit var jobSRange: TextInputEditText
 
+    private lateinit var userID: String
+
     private lateinit var btnaddPost: Button
 
     private lateinit var dbRef: FirebaseFirestore
@@ -39,6 +41,8 @@ class addPost : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val rootView = inflater.inflate(R.layout.fragment_add_post, container, false)
+
+        userID = FirebaseAuth.getInstance().currentUser!!.uid
 
         jobName = rootView.findViewById(R.id.jobNameField)
         jobDescrip = rootView.findViewById(R.id.jobDescripField)
@@ -93,7 +97,7 @@ class addPost : Fragment() {
         val currentDocumentId = currentDocumentRef.id
 
         val jPostID = dbRef.collection("JobPosts").document().id
-        val jPosts = JobPostsModel(jobNameText, jobDescripText, jobDateText, jobCNumberText, jobSRangeText)
+        val jPosts = JobPostsModel(jobNameText, jobDescripText, jobDateText, jobCNumberText, jobSRangeText, userID)
         dbRef.collection("JobPosts").document(currentDocumentId).set(jPosts)
             .addOnSuccessListener {
                 Toast.makeText(requireContext(), "Data inserted successfully", Toast.LENGTH_LONG).show()
