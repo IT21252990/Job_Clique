@@ -1,5 +1,7 @@
 package com.example.jobclique
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -56,19 +58,39 @@ class EmployerJobApplicationsDetailed : Fragment() {
         statusDropDown?.onItemSelectedListener=object : AdapterView.OnItemSelectedListener{
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                Toast.makeText(context , "This applicant is ${arrData[p2]} " , Toast.LENGTH_LONG).show()
+                //Toast.makeText(context , "This applicant is ${arrData[p2]} " , Toast.LENGTH_LONG).show()
                 selected = arrData[p2]
             }
 
             override fun onNothingSelected(p0: AdapterView<*>?) {
-                Toast.makeText(context , "Nothing Selected" , Toast.LENGTH_LONG).show()
+                //Toast.makeText(context , "Nothing Selected" , Toast.LENGTH_LONG).show()
             }
 
         }
 
 
         btnupdate.setOnClickListener{
-            updateStatus( id, selected )
+
+            val builder = AlertDialog.Builder(context)
+
+            builder.setTitle("Confirmation")
+                .setMessage("Are you sure you want to proceed?")
+
+            // Set the positive button and its click listener
+            builder.setPositiveButton("Yes") { dialogInterface: DialogInterface, _: Int ->
+                //update status
+                updateStatus( id, selected )
+                dialogInterface.dismiss()
+            }
+
+            // Set the negative button and its click listener
+            builder.setNegativeButton("No") { dialogInterface: DialogInterface, _: Int ->
+                dialogInterface.dismiss()
+            }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+
 
         }
 

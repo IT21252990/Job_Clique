@@ -1,6 +1,6 @@
 package com.example.jobclique
 
-import com.google.firebase.firestore.FieldValue
+import com.google.firebase.Timestamp
 
 class JobApplicationData(
     var Id: String,
@@ -9,6 +9,6 @@ class JobApplicationData(
     var phoneNo: String? = null,
     var optional: String? = null,
     var status: String? = null,
-    var appliedDate: FieldValue?= null,
+    var appliedDate: Timestamp?= null,
     var userID: String? = null,
 )

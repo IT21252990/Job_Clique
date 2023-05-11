@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
 
@@ -42,19 +43,24 @@ class AppliedJobs : Fragment() {
                 val dataList = arrayListOf<JobApplicationData>()
                 for (document in querySnapshot.documents) {
                     // Convert Firestore documents to instances of MyData
+                    var documentId = document.id
+
                     val myData = JobApplicationData(
                         document.getString("id") ?:"",
                         document.getString("name") ?: "",
                         document.getString("email")?:"",
                         document.getString("phoneNo")?:"",
                         document.getString("email")?:"",
-                        document.getString("status")?:""
+                        document.getString("status")?:"",
+                        document.getTimestamp("appliedDate")?: Timestamp(0, 0)
                     )
+                    myData.Id = documentId
+
                     dataList.add(myData)
                 }
                 // Notify the RecyclerView adapter that the data has changed
                 adapter = JobApplicationAdapter(dataList)
-                //adapter.setOnItemDeleteListener()
+
                 recyclerView.adapter = adapter
 
                 adapter.notifyDataSetChanged()

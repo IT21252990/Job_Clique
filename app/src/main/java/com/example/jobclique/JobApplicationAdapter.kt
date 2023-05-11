@@ -11,7 +11,12 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.Timestamp
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 interface OnItemDeleteListener {
@@ -22,12 +27,14 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
 
 
 
-    private var onItemDeleteListener: OnItemDeleteListener? = null
-
-    fun setOnItemDeleteListener(listener: OnItemDeleteListener) {
-        onItemDeleteListener = listener
-    }
+//    private var onItemDeleteListener: OnItemDeleteListener? = null
+//
+//    fun setOnItemDeleteListener(listener: OnItemDeleteListener) {
+//        onItemDeleteListener = listener
+//    }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val applicant: TextView = itemView.findViewById(R.id.tvApplicant)
+        val company: TextView = itemView.findViewById(R.id.tvCompany)
         val appliedDate: TextView = itemView.findViewById(R.id.tvAppliedDate)
         val status: TextView = itemView.findViewById(R.id.tvStatus)
         val deletebtn : ImageButton = itemView.findViewById(R.id.btnApplicationDelete)
@@ -42,30 +49,39 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
         val finalPosition = position
 
         val JobApplicationData = jobApplicationList[finalPosition]
-        //holder.appliedDate.text = JobApplicationData.AppliedDate.toString()
-   //     holder.status.text = JobApplicationData.Status
 
-//        holder.deletebtn.setOnClickListener {
-//            onItemDeleteListener?.onItemDelete(position)
-//        }
+        holder.applicant.text = JobApplicationData.name
+
+        //applied date
+        val appliedDate: Timestamp? = JobApplicationData.appliedDate
+        if (appliedDate != null) {
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+            val formattedDate: String = dateFormat.format(appliedDate.toDate())
+
+            holder.appliedDate.text = formattedDate
+
+        } else {
+            holder.appliedDate.text = "No date available"
+        }
 
         holder.status.text = JobApplicationData.status
 
         holder.deletebtn.setOnClickListener {
             val builder = AlertDialog.Builder(holder.status.context)
-            builder.setTitle("Are you Sure ?")
-            builder.setMessage("Deleted data can't be Undo")
+            builder.setTitle("Do you wanted to delete the application ?")
+            builder.setMessage("Deleted data can't be Undo!")
             builder.setPositiveButton("Delete") { dialog, which ->
-                FirebaseFirestore.getInstance().collection("JobApplications").get()
-                    .onSuccessTask(){
-                        FirebaseFirestore.getInstance().collection("JobApplications").document("UserID").delete()
-                    }
+                onItemDelete(position)
             }
             builder.setNegativeButton("Cancel") { dialog, which ->
                 Toast.makeText(holder.status.context, "Cancelled", Toast.LENGTH_SHORT).show()
             }
             builder.show()
+
+
         }
+
+
 
     }
     override fun getItemCount() = jobApplicationList.size
@@ -82,7 +98,7 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
             .document(jobApplicationData.Id)
             .delete()
             .addOnSuccessListener {
-                Log.d("TAG", "DocumentSnapshot successfully deleted!")
+                Log.d("TAG", "Successfully deleted!")
             }
             .addOnFailureListener { e ->
                 Log.w("TAG", "Error deleting document", e)

@@ -54,14 +54,14 @@
 
             <TextView
                 android:id="@+id/tvTHTitle"
-                android:layout_width="63dp"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:background="@color/darkBlue"
-                android:paddingLeft="10dp"
+                android:paddingLeft="5dp"
                 android:paddingTop="5dp"
-                android:paddingRight="10dp"
+                android:paddingRight="5dp"
                 android:paddingBottom="5dp"
-                android:text="Title"
+                android:text="Apllicant name"
                 android:textAlignment="center"
                 android:textColor="@color/lightBlue"
                 android:textSize="16sp" />
@@ -71,9 +71,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/Blue"
-                android:paddingLeft="10dp"
+                android:paddingLeft="5dp"
                 android:paddingTop="5dp"
-                android:paddingRight="10dp"
+                android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:text="Company"
                 android:textAlignment="center"
@@ -82,7 +82,7 @@
 
             <TextView
                 android:id="@+id/textView23"
-                android:layout_width="86dp"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:background="@color/darkBlue"
                 android:paddingLeft="10dp"

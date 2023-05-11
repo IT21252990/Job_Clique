@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -24,7 +25,7 @@ class EmployerJobApplications : Fragment() {
 
     private lateinit var adapter : EmployerJobApplicationsAdapter
 
-    private lateinit var documentId :String
+    //private lateinit var documentId :String
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreateView(
@@ -32,13 +33,6 @@ class EmployerJobApplications : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_employer_job_applications, container, false)
-
-        val Button : Button = view.findViewById(R.id.applicants)
-        Button.setOnClickListener{
-            val fragment = EmployerJobApplicationsDetailed()
-            val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
-        }
 
         recyclerView = view.findViewById(R.id.RecyVReceivedAppl)
 
@@ -50,22 +44,22 @@ class EmployerJobApplications : Fragment() {
                 val dataList = arrayListOf<JobApplicationModel>()
                 for (document in querySnapshot.documents) {
 
-                    documentId = document.id
+                    var documentId = document.id
 
                     // Convert Firestore documents to instances of MyData
                     val myData = JobApplicationModel(
-//                        document.getString("ApplicationID") ?: "",
+
                         document.getString("name") ?: "",
                         document.getString("email")?:"",
                         document.getString("phoneNo")?:"",
                         document.getString("optional")?:"",
                         document.getString("status")?:"",
                         document.getString("id")?:"",
-                        //document.get("AppliedDate")?:""?.as FieldValue?,
-                        //document.getString("UserID")?:"",
-
 
                     )
+
+                    myData.id = documentId
+
                     dataList.add(myData)
                 }
                 // Notify the RecyclerView adapter that the data has changed
@@ -74,12 +68,11 @@ class EmployerJobApplications : Fragment() {
 
                 adapter.setOnItemClickListner(object:EmployerJobApplicationsAdapter.onItemClickListner{
                     override fun onItemClick(position: Int) {
-                        //val intent = Intent(this,EmployerJobApplicationsDetailed::class.java)
 
                         val fragment = EmployerJobApplicationsDetailed()
 
                         //put extras
-                        //fragment.putExtra("ApplicationID" , dataList[position].ApplicationID)
+
                         val bundle = Bundle().apply {
                             //putString("ApplicationID", dataList[position].ApplicationID)
                             putString("name", dataList[position].Name)
@@ -87,13 +80,12 @@ class EmployerJobApplications : Fragment() {
                             putString("phoneNo", dataList[position].PhoneNo)
                             putString("optional", dataList[position].Optional)
                             putString("status", dataList[position].Status)
-                            putString("id", documentId )
+                            putString("id", dataList[position].id )
                         }
                         fragment.arguments = bundle
 
                         val transaction = fragmentManager?.beginTransaction()
                         transaction?.replace(R.id.frame_layout_employer,fragment)?.commit()
-
 
                     }
 
