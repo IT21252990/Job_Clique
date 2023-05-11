@@ -11,12 +11,16 @@ import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
 class addPost : Fragment() {
+
+    private lateinit var currentDocumentRef: DocumentReference
+
 
     private lateinit var jobName: TextInputEditText
     private lateinit var jobDescrip: TextInputEditText
@@ -39,15 +43,19 @@ class addPost : Fragment() {
         jobName = rootView.findViewById(R.id.jobNameField)
         jobDescrip = rootView.findViewById(R.id.jobDescripField)
         jobDate = rootView.findViewById(R.id.addedDateField)
-        jobCNumber = rootView.findViewById(R.id.salaryRangeField)
         jobSRange = rootView.findViewById(R.id.salaryRangeField)
+        jobCNumber = rootView.findViewById(R.id.phoneField)
+
         btnaddPost = rootView.findViewById(R.id.addPostBtn)
 
         btnaddPost.setOnClickListener { saveJobPostsData() }
 
         dbRef = FirebaseFirestore.getInstance()
 
-        dbRef.collection("Employers").document()
+//        dbRef.collection("Employers").document()
+
+        dbRef = FirebaseFirestore.getInstance()
+        currentDocumentRef = dbRef.collection("JobPosts").document()
 
         return rootView
     }
@@ -57,8 +65,8 @@ class addPost : Fragment() {
 
         val jobNameText = jobName.text.toString()
         val jobDescripText = jobDescrip.text.toString()
-        val jobDateText = jobDate.toString()
-        val jobCNumberText = jobCNumber.toString()
+        val jobDateText = jobDate.text.toString()
+        val jobCNumberText = jobCNumber.text.toString()
         val jobSRangeText = jobSRange.text.toString()
 
         if (jobNameText.isEmpty()){
@@ -69,18 +77,29 @@ class addPost : Fragment() {
             jobDescrip.error = "Please enter description"
             return
         }
+        if (jobDateText.isEmpty()){
+            jobDate.error = "Please enter Date"
+            return
+        }
+        if (jobCNumberText.isEmpty()){
+            jobCNumber.error = "Please enter Contact Number"
+            return
+        }
         if (jobSRangeText.isEmpty()){
             jobSRange.error = "Please enter Salary Range"
             return
         }
+
+        val currentDocumentId = currentDocumentRef.id
+
         val jPostID = dbRef.collection("JobPosts").document().id
-        val jPosts = JobPostsModel(jobNameText, jobDescripText, jobCNumberText, jobSRangeText ,jobDateText)
-        dbRef.collection("JobPosts").document(jPostID).set(jPosts)
+        val jPosts = JobPostsModel(jobNameText, jobDescripText, jobDateText, jobCNumberText, jobSRangeText)
+        dbRef.collection("JobPosts").document(currentDocumentId).set(jPosts)
             .addOnSuccessListener {
                 Toast.makeText(requireContext(), "Data inserted successfully", Toast.LENGTH_LONG).show()
                 jobName.text?.clear()
                 jobDescrip.text?.clear()
-//                jobDate.text?.clear()
+                jobDate.text?.clear()
                 jobCNumber.text?.clear()
                 jobSRange.text?.clear()
 

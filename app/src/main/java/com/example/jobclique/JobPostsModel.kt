@@ -5,14 +5,15 @@ import com.google.type.Date
 
 data class JobPostsModel(
 
-//    var jPostID: String? = null,
+//    var JobId : String? = null,
     var JobName: String? = null,
     var JobDescrip: String? = null,
+    var JobDate: String? = null,
     var JobCNumber: String? = null,
     var JobSalary: String? = null,
-    var JobDate: String? = null,
+
 //    val timestamp: Long,
-    var id:String? = null,
+//    var id:String? = null,
 
     var EmployerID:EmployerRegistrationNextPart? =null
 )

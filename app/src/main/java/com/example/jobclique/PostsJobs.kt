@@ -1,7 +1,6 @@
 package com.example.jobclique
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +12,7 @@ import com.google.firebase.firestore.*
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class PostsJobs : Fragment() , JobPostAdapter.OnDeleteClickListener {
+class PostsJobs : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var postList: ArrayList<JobPostsModel>
@@ -32,16 +31,16 @@ class PostsJobs : Fragment() , JobPostAdapter.OnDeleteClickListener {
         db = FirebaseFirestore.getInstance()
 
         db.collection("JobPosts").get()
-            .addOnSuccessListener {
-                if (!it.isEmpty){
-                    for (data in it.documents){
-                        val post: JobPostsModel? = data.toObject(JobPostsModel::class.java)
+            .addOnSuccessListener { querySnapshot ->
+                if (!querySnapshot.isEmpty){
+                    for (document in querySnapshot.documents){
+                        val post: JobPostsModel? = document.toObject(JobPostsModel::class.java)
                         if (post != null){
                            postList.add(post)
                         }
                     }
 
-                    recyclerView.adapter = JobPostAdapter(postList)
+                    recyclerView.adapter = context?.let { JobPostAdapter(it,postList) }
                 }
             }
             .addOnFailureListener { exception->
@@ -51,20 +50,20 @@ class PostsJobs : Fragment() , JobPostAdapter.OnDeleteClickListener {
         return view
 
     }
-
-    override fun onDeleteClick(documentId: String) {
-        val db = Firebase.firestore
-        val collectionRef = db.collection("JobPosts")
-
-        collectionRef.document(documentId)
-            .delete()
-            .addOnSuccessListener {
-                // Document deleted successfully
-            }
-            .addOnFailureListener { e ->
-                // Handle any errors
-            }
-    }
+//
+//    override fun onDeleteClick(documentId: String) {
+//        val db = Firebase.firestore
+//        val collectionRef = db.collection("JobPosts")
+//
+//        collectionRef.document(documentId)
+//            .delete()
+//            .addOnSuccessListener {
+//                // Document deleted successfully
+//            }
+//            .addOnFailureListener { e ->
+//                // Handle any errors
+//            }
+//    }
 
 }
 
