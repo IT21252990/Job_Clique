@@ -54,9 +54,7 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
 
 
         holder.salary.text = jobPosts.jobSalary
-//        holder.applybtn.setOnClickListener(){
-//            onItemClick?.invoke(jobPosts)
-//        }
+
     }
     override fun getItemCount(): Int {
         return jobsList.size

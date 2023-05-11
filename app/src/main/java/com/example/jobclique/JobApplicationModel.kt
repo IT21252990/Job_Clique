@@ -12,6 +12,7 @@ class JobApplicationModel(
     var id : String? = null,
     var AppliedDate: Date?= null,
     var UserID: String? = null,
+    var employerID: String? = null,
 
 
 //    var JobPostID: String? = null,

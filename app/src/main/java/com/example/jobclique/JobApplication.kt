@@ -2,9 +2,11 @@ package com.example.jobclique
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.CollectionReference
@@ -12,6 +14,11 @@ import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 
 class JobApplication : AppCompatActivity() {
+
+    private lateinit var employerID : String
+    private lateinit var empName: TextView
+    private lateinit var jobName: TextView
+
 
     private lateinit var etname: EditText
     private lateinit var etemail: EditText
@@ -29,6 +36,11 @@ class JobApplication : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job_application)
+
+        empName = findViewById(R.id.tvJobTitle)
+        jobName = findViewById(R.id.tvJobSubHead)
+
+        setValuesToViews()
 
         userID = FirebaseAuth.getInstance().currentUser!!.uid
 
@@ -92,6 +104,7 @@ class JobApplication : AppCompatActivity() {
                 "status" to status,
                 "appliedDate" to appliedDate,
                 "userID" to userID,
+                "employerID" to employerID
             )
             if (valid) {
                 dbRef.add(mapUpdate)
@@ -121,6 +134,38 @@ class JobApplication : AppCompatActivity() {
         }
 
         return valid
+    }
+
+
+    private fun setValuesToViews(){
+        val extras = intent.extras
+        if (extras != null) {
+
+            employerID = extras.getString("employerID").toString()
+
+            if (employerID != null) {
+                FirebaseFirestore.getInstance().collection("Employers")
+                    .document(employerID)
+                    .get()
+                    .addOnSuccessListener { documentSnapshot ->
+                        if (documentSnapshot.exists()) {
+                            val name = documentSnapshot.getString("CompanyName")
+                            empName.text = name
+                        } else {
+                            empName.text = "Employer Name"
+                        }
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.w("TAG", "Error getting documents.", exception)
+                    }
+            }
+
+            jobName.text = extras.getString("jobName").toString()
+
+
+
+        }
+
     }
 
 }
