@@ -11,12 +11,21 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerView.Adapter<LatestJobsAdapter.MyViewHolder>() {
 
-    var onItemClick : ((JobPosts) -> Unit )? = null
+    private lateinit var mListner: onItemClickListner
+
+    interface onItemClickListner{
+        fun onItemClick( position: Int)
+    }
+    fun setOnItemClickListner(clickListner: onItemClickListner){
+        mListner = clickListner
+    }
+
+    //var onItemClick : ((JobPosts) -> Unit )? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestJobsAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.latest_jobs_item ,
         parent, false)
 
-        return MyViewHolder(itemView)
+        return MyViewHolder(itemView , mListner)
     }
     override fun onBindViewHolder(holder: LatestJobsAdapter.MyViewHolder, position: Int) {
         val jobPosts : JobPosts = jobsList[position]
@@ -45,19 +54,25 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
 
 
         holder.salary.text = jobPosts.jobSalary
-        holder.applybtn.setOnClickListener(){
-            onItemClick?.invoke(jobPosts)
-        }
+//        holder.applybtn.setOnClickListener(){
+//            onItemClick?.invoke(jobPosts)
+//        }
     }
     override fun getItemCount(): Int {
         return jobsList.size
     }
-    public class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
+    public class MyViewHolder(itemView : View , clickListner : onItemClickListner) : RecyclerView.ViewHolder(itemView){
 
         val jobTitle : TextView = itemView.findViewById(R.id.title)
         val employerID : TextView = itemView.findViewById(R.id.EmployerName)
         val salary : TextView = itemView.findViewById(R.id.Salary)
         val applybtn : Button = itemView.findViewById(R.id.btnApplyJob)
+
+        init{
+            applybtn.setOnClickListener{
+                clickListner.onItemClick(adapterPosition)
+            }
+        }
 
     }
 }

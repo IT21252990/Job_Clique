@@ -15,9 +15,12 @@ class Home : Fragment() {
 
     private lateinit var fStore: FirebaseFirestore
 
+    private val db = FirebaseFirestore.getInstance()
+    private val jobPostsCollection = db.collection("JobPosts")
+    private lateinit var adapter: LatestJobsAdapter
+
     private lateinit var recyclerView: RecyclerView
-    private lateinit var jobPostsArrayList: ArrayList<JobPosts>
-    private lateinit var latestJobsAdapter: LatestJobsAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,41 +30,71 @@ class Home : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
 
-    recyclerView = view.findViewById(R.id.RecyclerLatestJobs)
-    recyclerView.layoutManager = LinearLayoutManager(context)
-    recyclerView.setHasFixedSize(true)
 
-    jobPostsArrayList = arrayListOf()
-    latestJobsAdapter = LatestJobsAdapter(jobPostsArrayList)
-    recyclerView.adapter = latestJobsAdapter
+//    latestJobsAdapter.onItemClick={
+//        val intent = Intent(requireContext(), JobApplication::class.java)
+//        startActivity(intent)
+//        requireActivity().finish()
+//    }
 
-    latestJobsAdapter.onItemClick={
-        val intent = Intent(requireContext(), JobApplication::class.java)
-        startActivity(intent)
-        requireActivity().finish()
-    }
-    EventChangeListner()
-    return view }
-    private fun EventChangeListner() {
-        fStore = FirebaseFirestore.getInstance()
-        fStore.collection("JobPosts").orderBy("jobDate", Query.Direction.ASCENDING).
-                addSnapshotListener(object : EventListener<QuerySnapshot>{
-                    override fun onEvent(
-                        value: QuerySnapshot?,
-                        error: FirebaseFirestoreException?
-                    ) {
-                        if( error != null ){
-                            Log.e("FireStore Error" , error.message.toString())
-                            return
+        recyclerView = view.findViewById(R.id.RecyclerLatestJobs)
+
+        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        //fetchData()
+        jobPostsCollection.get()
+            .addOnSuccessListener { querySnapshot ->
+                val dataList = arrayListOf<JobPosts>()
+                for (document in querySnapshot.documents) {
+
+                    // Convert Firestore documents to instances of MyData
+                    val myData = JobPosts(
+
+                        document.getString("jobName") ?: "",
+                        document.getString("jobSalary")?:"",
+                        document.getString("employerID")?:"",
+
+                        )
+
+
+                    dataList.add(myData)
+                }
+                // Notify the RecyclerView adapter that the data has changed
+                adapter = LatestJobsAdapter(dataList)
+                recyclerView.adapter = adapter
+
+                adapter.setOnItemClickListner(object:LatestJobsAdapter.onItemClickListner{
+                    override fun onItemClick(position: Int) {
+
+                        val intent = Intent(requireContext(), JobApplication::class.java)
+
+
+                        //put extras
+
+                        val bundle = Bundle().apply {
+                            //putString("ApplicationID", dataList[position].ApplicationID)
+                            putString("employerID", dataList[position].employerID)
+                            putString("jobName", dataList[position].jobName)
                         }
-                        for ( dc : DocumentChange in value?.documentChanges!!){
-                            if(dc.type == DocumentChange.Type.ADDED){
-                                jobPostsArrayList.add(dc.document.toObject(JobPosts::class.java))
-                            }
-                        }
-                        latestJobsAdapter.notifyDataSetChanged()
+
+                        intent.putExtras(bundle)
+
+                        startActivity(intent)
+                        requireActivity().finish()
+
                     }
 
                 })
+
+                adapter.notifyDataSetChanged()
+
+            }
+            .addOnFailureListener { exception ->
+                Log.w("TAG", "Error getting documents.", exception)
+            }
+
+
+    return view
     }
+
 }
