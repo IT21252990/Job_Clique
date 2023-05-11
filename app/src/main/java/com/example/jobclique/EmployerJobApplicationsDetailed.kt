@@ -14,6 +14,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
+import java.util.*
 
 class EmployerJobApplicationsDetailed : Fragment() {
 
@@ -106,10 +107,11 @@ class EmployerJobApplicationsDetailed : Fragment() {
             tvName.text = arguments.getString("name")
             tvEmail.text = arguments.getString("email")
             tvPhone.text = arguments.getString("phoneNo")
-            tvAddedDate.text = arguments.getString("ApplicationID")
+            tvAddedDate.text = (arguments.getSerializable("appliedDate") as? Date).toString()
             tvoptional.text = arguments.getString("optional")
             status = arguments.getString("status").toString()
             id = arguments.getString("id").toString()
+
 
         }
 

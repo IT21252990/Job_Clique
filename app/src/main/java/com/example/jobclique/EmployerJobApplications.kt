@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
@@ -55,6 +56,7 @@ class EmployerJobApplications : Fragment() {
                         document.getString("optional")?:"",
                         document.getString("status")?:"",
                         document.getString("id")?:"",
+                        document.getTimestamp("appliedDate")?: Timestamp(0, 0),
 
                     )
 
@@ -73,6 +75,8 @@ class EmployerJobApplications : Fragment() {
 
                         //put extras
 
+                        val timestamp = dataList[position].AppliedDate?.toDate()
+
                         val bundle = Bundle().apply {
                             //putString("ApplicationID", dataList[position].ApplicationID)
                             putString("name", dataList[position].Name)
@@ -81,6 +85,7 @@ class EmployerJobApplications : Fragment() {
                             putString("optional", dataList[position].Optional)
                             putString("status", dataList[position].Status)
                             putString("id", dataList[position].id )
+                            putSerializable("appliedDate",timestamp)
                         }
                         fragment.arguments = bundle
 

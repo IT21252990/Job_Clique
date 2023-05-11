@@ -1,5 +1,6 @@
 package com.example.jobclique
 
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FieldValue
 import java.util.*
 
@@ -10,7 +11,7 @@ class JobApplicationModel(
     var Optional: String,
     var Status: String? = null,
     var id : String? = null,
-    var AppliedDate: Date?= null,
+    var AppliedDate: Timestamp?= null,
     var UserID: String? = null,
     var employerID: String? = null,
 
