@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerView.Adapter<LatestJobsAdapter.MyViewHolder>() {
@@ -57,6 +59,22 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
 //        holder.applybtn.setOnClickListener(){
 //            onItemClick?.invoke(jobPosts)
 //        }
+        holder.btnWishList.setOnCheckedChangeListener { buttonView, isChecked ->
+
+            val db = FirebaseFirestore.getInstance()
+            val userID = FirebaseAuth.getInstance().currentUser!!.uid
+            val data = mapOf(
+                "UserID" to userID
+            )
+            if (isChecked) {
+                db.collection("Wishlist").add(data)
+            }
+            if (!isChecked) {
+
+            }
+
+
+        }
     }
     override fun getItemCount(): Int {
         return jobsList.size
@@ -68,11 +86,13 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
         val salary : TextView = itemView.findViewById(R.id.Salary)
         val applybtn : Button = itemView.findViewById(R.id.btnApplyJob)
 
+        val btnWishList : CheckBox = itemView.findViewById(R.id.btnAddWishlist)
+
+
         init{
             applybtn.setOnClickListener{
                 clickListner.onItemClick(adapterPosition)
             }
         }
-
     }
 }
