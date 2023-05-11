@@ -16,6 +16,7 @@ class PostsJobs : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var postList: ArrayList<JobPostsModel>
+    private lateinit var adapter: JobPostAdapter
     private var db = Firebase.firestore
 
     override fun onCreateView(
@@ -39,8 +40,8 @@ class PostsJobs : Fragment() {
                            postList.add(post)
                         }
                     }
+                    recyclerView.adapter = JobPostAdapter(requireContext(), postList)
 
-                    recyclerView.adapter = context?.let { JobPostAdapter(it,postList) }
                 }
             }
             .addOnFailureListener { exception->
@@ -50,20 +51,6 @@ class PostsJobs : Fragment() {
         return view
 
     }
-//
-//    override fun onDeleteClick(documentId: String) {
-//        val db = Firebase.firestore
-//        val collectionRef = db.collection("JobPosts")
-//
-//        collectionRef.document(documentId)
-//            .delete()
-//            .addOnSuccessListener {
-//                // Document deleted successfully
-//            }
-//            .addOnFailureListener { e ->
-//                // Handle any errors
-//            }
-//    }
 
 }
 

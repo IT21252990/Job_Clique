@@ -5,7 +5,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.PopupMenu
 import android.widget.TextView
@@ -14,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.google.firebase.firestore.FirebaseFirestore
 
-class JobPostAdapter(private val context: Context, private val postList: ArrayList<JobPostsModel>):
+class JobPostAdapter( private val context: Context, private val postList: ArrayList<JobPostsModel>):
     RecyclerView.Adapter<JobPostAdapter.MyViewHolder>(){
 
     private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
@@ -43,38 +42,13 @@ class JobPostAdapter(private val context: Context, private val postList: ArrayLi
        private fun popupMenus(itemView: View) {
            val position = postList[adapterPosition]
            val popupMenus = PopupMenu(context,itemView)
-//           val documentId = position.JobId
 
            popupMenus.inflate(R.menu.show_menu)
            popupMenus.setOnMenuItemClickListener {
                when(it.itemId){
                    R.id.editText -> {
-//                       val itemView = LayoutInflater.from(context).inflate(R.layout.fragment_add_post, null)
-//
-//                       val jobName = itemView.findViewById<EditText>(R.id.jobNameField)
-//                       val jobDescrip = itemView.findViewById<EditText>(R.id.jobDescripField)
-//                       val jobDate = itemView.findViewById<EditText>(R.id.addedDateField)
-//                       val jobCNumber = itemView.findViewById<EditText>(R.id.phoneField)
-//                       val jobSRange = itemView.findViewById<EditText>(R.id.salaryRangeField)
-//
-//                              AlertDialog.Builder(context)
-//                                  .setView(itemView)
-//                                  .setPositiveButton("Ok"){
-//                                      dialog,_ ->
-//
-//                                      position.JobName = jobName.text.toString()
-//                                      position.JobDescrip = jobDescrip.text.toString()
-//                                      position.JobDate = jobDate.text.toString()
-//                                      position.JobCNumber = jobCNumber.text.toString()
-//                                      position.JobSalary = jobSRange.text.toString()
-//
-//                                      notifyDataSetChanged()
-//                                      Toast.makeText(context,"Job Post Information is Updated !", Toast.LENGTH_SHORT).show()
-//                                      dialog.dismiss()
-//                                  }
-                       val itemView = LayoutInflater.from(context).inflate(R.layout.fragment_add_post, null)
 
-                       // Find your EditText views
+                       val itemView = LayoutInflater.from(context).inflate(R.layout.fragment_add_post, null)
 
                        AlertDialog.Builder(context)
                            .setView(itemView)
@@ -120,17 +94,6 @@ class JobPostAdapter(private val context: Context, private val postList: ArrayLi
                    }
                    R.id.deleteText -> {
 
-//                       AlertDialog.Builder(context)
-//                           .setTitle("Delete")
-//                           .setIcon(R.drawable.ic_warning)
-//                           .setMessage("Are you you want to delete this Post ? ")
-//                           .setPositiveButton("Yes"){
-//                               dialog, _ ->
-//                               postList.removeAt(adapterPosition)
-//                               notifyDataSetChanged()
-//                               Toast.makeText(context,"Post is Deleted !", Toast.LENGTH_SHORT).show()
-//                               dialog.dismiss()
-//                           }
                        AlertDialog.Builder(context)
                            .setTitle("Delete")
                            .setIcon(R.drawable.ic_warning)
@@ -227,4 +190,6 @@ class JobPostAdapter(private val context: Context, private val postList: ArrayLi
     override fun getItemCount(): Int {
         return postList.size
     }
+
+
 }
