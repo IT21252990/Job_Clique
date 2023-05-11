@@ -75,6 +75,7 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
 
 
         }
+
     }
     override fun getItemCount(): Int {
         return jobsList.size

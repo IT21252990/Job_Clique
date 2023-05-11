@@ -63,7 +63,7 @@
         android:layout_width="408dp"
         android:layout_height="23dp"
         android:gravity="center_horizontal|top"
-        android:text="Applications Closing : Sun, 16 Apr 2023"
+        android:text=""
         android:textAlignment="gravity"
         android:textColor="@color/darkBlue"
         android:textSize="14sp"
