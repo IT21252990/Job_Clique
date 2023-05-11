@@ -11,4 +11,5 @@ class JobApplicationData(
     var status: String? = null,
     var appliedDate: Timestamp?= null,
     var userID: String? = null,
+    var employerID:String ? = null,
 )

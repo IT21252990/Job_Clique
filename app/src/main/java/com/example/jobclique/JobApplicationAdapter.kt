@@ -26,12 +26,6 @@ interface OnItemDeleteListener {
 class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplicationData>) : RecyclerView.Adapter<JobApplicationAdapter.ViewHolder>(), OnItemDeleteListener{
 
 
-
-//    private var onItemDeleteListener: OnItemDeleteListener? = null
-//
-//    fun setOnItemDeleteListener(listener: OnItemDeleteListener) {
-//        onItemDeleteListener = listener
-//    }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val applicant: TextView = itemView.findViewById(R.id.tvApplicant)
         val company: TextView = itemView.findViewById(R.id.tvCompany)
@@ -51,6 +45,28 @@ class JobApplicationAdapter(private val jobApplicationList: ArrayList<JobApplica
         val JobApplicationData = jobApplicationList[finalPosition]
 
         holder.applicant.text = JobApplicationData.name
+
+        //company name
+        val documentId =  JobApplicationData.employerID
+
+        if (documentId != null) {
+            FirebaseFirestore.getInstance().collection("Employers")
+                .document(documentId)
+                .get()
+                .addOnSuccessListener { documentSnapshot ->
+                    if (documentSnapshot.exists()) {
+                        val empName = documentSnapshot.getString("CompanyName")
+                        holder.company.text = empName
+                    } else {
+                        holder.company.text = "Employer Name"
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.w("TAG", "Error getting documents.", exception)
+                }
+        }
+
+        //holder.company.text = JobApplicationData.employerID
 
         //applied date
         val appliedDate: Timestamp? = JobApplicationData.appliedDate

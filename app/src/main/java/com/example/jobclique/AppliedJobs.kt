@@ -52,7 +52,9 @@ class AppliedJobs : Fragment() {
                         document.getString("phoneNo")?:"",
                         document.getString("email")?:"",
                         document.getString("status")?:"",
-                        document.getTimestamp("appliedDate")?: Timestamp(0, 0)
+                        document.getTimestamp("appliedDate")?: Timestamp(0, 0),
+                        document.getString("userID")?:"",
+                        document.getString("employerID")?:""
                     )
                     myData.Id = documentId
 
