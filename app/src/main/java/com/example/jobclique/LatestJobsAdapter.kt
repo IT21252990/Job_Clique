@@ -9,6 +9,7 @@ import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentId
 import com.google.firebase.firestore.FirebaseFirestore
 
 class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerView.Adapter<LatestJobsAdapter.MyViewHolder>() {
@@ -63,8 +64,10 @@ class LatestJobsAdapter(private val jobsList : ArrayList<JobPosts>) : RecyclerVi
 
             val db = FirebaseFirestore.getInstance()
             val userID = FirebaseAuth.getInstance().currentUser!!.uid
+            val jobpostName = jobsList.get(position).jobName
             val data = mapOf(
-                "UserID" to userID
+                "UserID" to userID,
+                "JobPostName" to jobpostName
             )
             if (isChecked) {
                 db.collection("Wishlist").add(data)
